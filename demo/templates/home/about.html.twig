@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}About{% endblock %}
+
+{% block body %}
+    <main style="max-width: 720px; margin: 2rem auto; font-family: system-ui, sans-serif; line-height: 1.5;">
+        <h1>About</h1>
+        <p>Samostudium Symfony stacku. Přechod z Laravelu, cíleně DDD, CQRS, Doctrine, Messenger.</p>
+        <p>Začátek: <strong>{{ startedAt }}</strong></p>
+
+        {% if topics is not empty %}
+            <h2>Aktuálně řeším</h2>
+            <ul>
+                {% for topic in topics %}
+                    <li>{{ topic }}</li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p>Zatím bez témat.</p>
+        {% endif %}
+
+        <p>
+            <a href="{{ path('app_home') }}">Home</a>
+            ·
+            <a href="{{ path('app_laravel_map') }}">Laravel map</a>
+        </p>
+    </main>
+{% endblock %}

@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ label }}{% endblock %}
+
+{% block body %}
+    <main style="max-width: 720px; margin: 2rem auto; font-family: system-ui, sans-serif;">
+        <h1>{{ label }}</h1>
+        <p>Téma: <code>{{ topic }}</code></p>
+        <p>Dynamická route <code>/study/{topic}</code> — v Laravelu bych to řešil podobně v <code>web.php</code>, tady přes PHP attribute na metodě.</p>
+        <p><a href="{{ path('app_home') }}">← zpět</a></p>
+    </main>
+{% endblock %}

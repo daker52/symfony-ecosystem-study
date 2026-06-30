@@ -49,9 +49,9 @@ Hlavní zdroje:
 ### Týden 1
 
 **Den 1 — Symfony základy**
-- [ ] nainstalovat Symfony CLI, vytvořit webapp
-- [ ] porovnat strukturu s Laravel (`src/` vs `app/`)
-- [ ] routing, controller, Twig
+- [x] nainstalovat Symfony CLI, vytvořit webapp
+- [x] porovnat strukturu s Laravel (`src/` vs `app/`)
+- [x] routing, controller, Twig
 
 Odkazy:
 - https://symfonycasts.com/screencast/symfony
@@ -174,10 +174,12 @@ Odkazy:
 ## Struktura repa
 
 ```
-docs/        — denní poznámky
-exercises/   — menší úkoly po tématech
-demo/        — finální demo appka
+demo/        — Symfony aplikace
+docs/        — studijní deník (den 1, den 2, …)
+private/     — jen lokálně, ne na git (.gitignore)
 ```
+
+Studijní poznámky: [docs/README.md](docs/README.md)
 
 ---
 
@@ -185,7 +187,7 @@ demo/        — finální demo appka
 
 | den | téma | hotovo | poznámka |
 |-----|------|--------|----------|
-| 1 | Symfony základy | | |
+| 1 | Symfony základy | x | [den-01](docs/den-01.md) |
 | 2 | konfigurace | | |
 | 3 | DI | | |
 | 4 | Doctrine | | |

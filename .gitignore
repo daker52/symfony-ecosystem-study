@@ -31,3 +31,6 @@ dist/
 
 # Logs
 *.log
+
+# Osobní studijní poznámky — jen lokálně, ne na GitHub
+/private/

@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block body %}
+    <main style="max-width: 720px; margin: 2rem auto; font-family: system-ui, sans-serif; line-height: 1.5;">
+        <h1>{{ title }}</h1>
+        <p>První den — routing, controller, Twig. Projekt běží, struktura sedí.</p>
+
+        <ul>
+            <li><a href="{{ path('app_about') }}">About</a></li>
+            <li><a href="{{ path('app_laravel_map') }}">Laravel → Symfony mapa</a></li>
+            <li><a href="{{ path('app_study_topic', { topic: 'routing' }) }}">Study: routing</a></li>
+            <li><a href="{{ path('app_study_topic', { topic: 'twig' }) }}">Study: twig</a></li>
+            <li><a href="{{ path('app_api_ping') }}">API ping (JSON)</a></li>
+            <li><a href="{{ path('app_api_version') }}">API version (JSON)</a></li>
+        </ul>
+    </main>
+{% endblock %}

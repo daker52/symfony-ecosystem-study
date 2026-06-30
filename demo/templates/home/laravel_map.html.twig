@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Laravel map{% endblock %}
+
+{% block body %}
+    <main style="max-width: 720px; margin: 2rem auto; font-family: system-ui, sans-serif;">
+        <h1>Laravel → Symfony</h1>
+        <p>Pro mě — rychlá mapa, ať vím kde co hledat.</p>
+
+        <table border="1" cellpadding="8" cellspacing="0" style="border-collapse: collapse; width: 100%;">
+            <thead>
+                <tr>
+                    <th>Laravel</th>
+                    <th>Symfony</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in mapping %}
+                    <tr>
+                        <td><code>{{ row.laravel }}</code></td>
+                        <td><code>{{ row.symfony }}</code></td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <p><a href="{{ path('app_home') }}">← zpět</a></p>
+    </main>
+{% endblock %}
