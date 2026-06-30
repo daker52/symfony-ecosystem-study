@@ -1,3 +1,5 @@
+![symfony-ecosystem-study](docs/assets/github-social-preview.png)
+
 # symfony-ecosystem-study
 
 Osobní poznámky a cvičení — přechod z Laravelu na Symfony stack.  
