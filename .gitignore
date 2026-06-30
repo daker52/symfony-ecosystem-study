@@ -1,0 +1,33 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# PHP / Symfony (future)
+/vendor/
+/var/
+/.env
+/.env.local
+/.env.*.local
+/phpunit.xml
+/.phpunit.cache
+/public/build/
+/public/bundles/
+
+# Node (future frontend)
+node_modules/
+dist/
+*.local
+
+# Tools
+/.phpstan.cache
+/mago-baseline.toml
+/linter-baseline.toml
+
+# Logs
+*.log
