@@ -21,7 +21,7 @@ Laravel a PHP znám, tady si mapuju, co je co jinde.
 | PHPStan, Mago | statická analýza |
 | DI, Console | service container, vlastní příkazy |
 
-Odkazy od zadavatele:
+Hlavní zdroje:
 - https://symfonycasts.com/
 - https://refactoring.guru/design-patterns
 - https://mago.carthage.software/latest/en/
