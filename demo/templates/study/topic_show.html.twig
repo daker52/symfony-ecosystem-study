@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ topic.title }}{% endblock %}
+
+{% block body %}
+    <main style="max-width: 720px; margin: 2rem auto; font-family: system-ui, sans-serif;">
+        <h1>{{ topic.title }}</h1>
+        <p>
+            <small>Den {{ topic.studyDay.number }} — {{ topic.studyDay.title }}</small><br>
+            <small>{{ topic.createdAt|date('d.m.Y H:i') }}</small>
+        </p>
+        <p>{{ topic.body }}</p>
+        <p>
+            <a href="{{ path('app_topics_index') }}">← všechny topics</a>
+        </p>
+    </main>
+{% endblock %}

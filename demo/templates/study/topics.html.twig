@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Study topics{% endblock %}
+
+{% block body %}
+    <main style="max-width: 720px; margin: 2rem auto; font-family: system-ui, sans-serif;">
+        <h1>Study topics</h1>
+        <p>Doctrine — data z SQLite DB. Den 3.</p>
+        <p><a href="{{ path('app_topics_new') }}">+ nový topic</a></p>
+
+        {% if topics is empty %}
+            <p>Zatím prázdné — spusť <code>php bin/console app:study:seed</code></p>
+        {% else %}
+            <ul>
+                {% for topic in topics %}
+                    <li>
+                        <a href="{{ path('app_topics_show', { slug: topic.slug }) }}">{{ topic.title }}</a>
+                        <small>— den {{ topic.studyDay.number }}</small>
+                    </li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+
+        <p><a href="{{ path('app_home') }}">← Home</a></p>
+    </main>
+{% endblock %}

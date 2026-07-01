@@ -65,25 +65,17 @@ Odkazy:
 
 - https://symfony.com/doc/current/configuration.html
 
-**Den 3 — Dependency Injection**
-- [ ] `services.yaml`, interface → implementace
-- [ ] tagy (základně)
-- [ ] porovnat s `AppServiceProvider` v Laravelu
-
-- https://symfonycasts.com/screencast/symfony/services
-- https://symfony.com/doc/current/service_container.html
-- https://refactoring.guru/design-patterns/dependency-injection
-
-**Den 4 — Doctrine**
-- [ ] entity, repository, migrace
-- [ ] vztahy (OneToMany, ManyToMany)
-- [ ] `persist()` + `flush()` — jiný mindset než Eloquent
+**Den 3 — Doctrine ORM**
+- [x] entity, repository, migrace
+- [x] vztah OneToMany / ManyToOne
+- [x] `persist()` + `flush()`
 
 - https://symfonycasts.com/screencast/symfony/doctrine
 - https://symfony.com/doc/current/doctrine.html
-- https://refactoring.guru/design-patterns/repository
 
-**Den 5 — Console**
+**Den 3 (původně DI)** — pokryto v [den 2](docs/den-02.md) + [compiler pass](docs/den-02-dodatek-compiler-pass.md)
+
+**Den 4 — Console**
 - [ ] vlastní command `app:hello`
 - [ ] argumenty, options, DI v commandu
 
@@ -191,9 +183,8 @@ Studijní poznámky: [docs/README.md](docs/README.md)
 |-----|------|--------|----------|
 | 1 | Symfony základy | x | [den-01](docs/den-01.md) |
 | 2 | konfigurace, DI | x | [den-02](docs/den-02.md) |
-| 3 | DI | | |
-| 4 | Doctrine | | |
-| 5 | Console | | |
+| 3 | Doctrine ORM | x | [den-03](docs/den-03.md) |
+| 4 | Console | | |
 | 6 | patterns | | |
 | 7 | DDD + CQRS | | |
 | 8 | Vue + TS | | |
