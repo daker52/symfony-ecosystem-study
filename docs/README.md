@@ -2,7 +2,8 @@
 
 Krátké poznámky z učení — hlavně pro mě, ať vidím progres.
 
-**Studijní zdroje:** [zdroje.md](zdroje.md)
+**Studijní zdroje:** [zdroje.md](zdroje.md)  
+**Aha poznatky (chyby, zapomenutí):** [aha-poznatky.md](aha-poznatky.md)
 
 | Den | Téma | Soubor |
 |-----|------|--------|

@@ -173,6 +173,6 @@ php bin/console debug:autowiring EntityManagerInterface
 
 ## Poznámky pro sebe
 
-- Když `could not find driver` → chybí `pdo_sqlite` v php.ini **nebo** běží starý web server (restartuj: `symfony server:stop` → `symfony server:start`).
-- Kontrola: `powershell -File check-php.ps1` v `demo/`, nebo `symfony php -m | findstr sqlite`
 - OneToMany: vlastník vztahu je **ManyToOne** strana (`StudyTopic.studyDay` má foreign key).
+
+**Aha / chyba:** SQLite `could not find driver` i po úpravě php.ini → zapomněl jsem restartovat `symfony server`. Viz [aha-poznatky.md](aha-poznatky.md).
