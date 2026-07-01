@@ -140,12 +140,27 @@ php bin/console debug:autowiring EntityManagerInterface
 
 ---
 
-## Zdroje
+## Zdroje co jsem studoval
 
-- https://symfonycasts.com/screencast/symfony/doctrine
-- https://symfony.com/doc/current/doctrine.html
-- https://symfony.com/doc/current/doctrine/associations.html
-- https://refactoring.guru/design-patterns/repository
+**SymfonyCasts (série Doctrine):**
+- [Doctrine](https://symfonycasts.com/screencast/symfony/doctrine)
+- [Doctrine Relations](https://symfonycasts.com/screencast/symfony/doctrine-relations)
+- [Migrations](https://symfonycasts.com/screencast/symfony/migrations)
+
+**Symfony Docs:**
+- [Databases and Doctrine](https://symfony.com/doc/current/doctrine.html)
+- [Associations (OneToMany)](https://symfony.com/doc/current/doctrine/associations.html)
+- [Migrations](https://symfony.com/doc/current/doctrine/migrations.html)
+
+**Doctrine (oficiální):**
+- [ORM Introduction](https://www.doctrine-project.org/projects/doctrine-orm/en/current/reference/introduction.html)
+- [Association Mapping](https://www.doctrine-project.org/projects/doctrine-orm/en/current/reference/association-mapping.html)
+
+**Patterns:**
+- [Refactoring Guru — Repository](https://refactoring.guru/design-patterns/repository)
+- [Martin Fowler — Repository](https://martinfowler.com/eaaCatalog/repository.html)
+
+→ víc v [zdroje.md](zdroje.md)
 
 ---
 

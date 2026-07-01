@@ -143,12 +143,24 @@ V Laravelu stejná idea, jen jiné názvy složek.
 
 ---
 
-## Zdroje co jsem použil
+## Zdroje co jsem studoval
 
-- [SymfonyCasts — Symfony](https://symfonycasts.com/screencast/symfony)
-- [Symfony Setup](https://symfony.com/doc/current/setup.html)
+**Videa (SymfonyCasts — prošel jsem):**
+- [Installing Symfony](https://symfonycasts.com/screencast/symfony/install)
+- [Routing](https://symfonycasts.com/screencast/symfony/routing) — attributes, `debug:router`
+- [Controller](https://symfonycasts.com/screencast/symfony/controller)
+- [Twig](https://symfonycasts.com/screencast/symfony/twig)
+
+**Docs:**
+- [The Architecture](https://symfony.com/doc/current/quick_tour/the_architecture.html)
+- [Setup](https://symfony.com/doc/current/setup.html)
 - [Routing](https://symfony.com/doc/current/routing.html)
-- [Templates](https://symfony.com/doc/current/templates.html)
+- [Templates / Twig](https://symfony.com/doc/current/templates.html)
+
+**K srovnání s Laravelem:**
+- [Kinsta — Laravel vs Symfony](https://kinsta.com/blog/laravel-vs-symfony/) — orientační přehled filozofie
+
+→ víc v [zdroje.md](zdroje.md)
 
 ---
 

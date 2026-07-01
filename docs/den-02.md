@@ -127,11 +127,26 @@ php bin/console lint:container
 
 ---
 
-## Zdroje
+## Zdroje co jsem studoval
 
-- https://symfony.com/doc/current/service_container.html
-- https://symfony.com/doc/current/configuration.html
-- https://symfonycasts.com/screencast/symfony/services
+**SymfonyCasts:**
+- [Service Container](https://symfonycasts.com/screencast/symfony/services)
+- [Creating Services](https://symfonycasts.com/screencast/symfony/creating-services)
+- [Dependency Injection](https://symfonycasts.com/screencast/symfony/dependency-injection)
+
+**Docs:**
+- [Service Container](https://symfony.com/doc/current/service_container.html)
+- [Autowiring](https://symfony.com/doc/current/service_container/autowiring.html)
+- [Configuration](https://symfony.com/doc/current/configuration.html)
+
+**Teorie (proč DI existuje):**
+- [Martin Fowler — Dependency Injection](https://martinfowler.com/articles/injection.html)
+- [Martin Fowler — Inversion of Control](https://martinfowler.com/bliki/InversionOfControl.html)
+
+**Srovnání s Laravelem:**
+- [Laravel Service Container docs](https://laravel.com/docs/11.x/container) — mapuju `bind()` na YAML binding
+
+→ compiler pass: [dodatek](den-02-dodatek-compiler-pass.md) · víc v [zdroje.md](zdroje.md)
 
 ---
 

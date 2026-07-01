@@ -25,8 +25,12 @@ Laravel a PHP znám, tady si mapuju, co je co jinde.
 
 Hlavní zdroje:
 - https://symfonycasts.com/
+- https://symfony.com/doc/current/index.html
 - https://refactoring.guru/design-patterns
+- https://martinfowler.com/bliki/
 - https://mago.carthage.software/latest/en/
+
+Kompletní seznam co studuju: [docs/zdroje.md](docs/zdroje.md)
 
 ---
 

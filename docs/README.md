@@ -2,6 +2,8 @@
 
 Krátké poznámky z učení — hlavně pro mě, ať vidím progres.
 
+**Studijní zdroje:** [zdroje.md](zdroje.md)
+
 | Den | Téma | Soubor |
 |-----|------|--------|
 | 1 | Symfony základy — routing, controller, Twig | [den-01.md](den-01.md) |

@@ -223,6 +223,9 @@ V Laravel 11+ podobná idea přes `ServiceProvider` a tagged bindings.
 
 ## Odkazy
 
-- https://symfony.com/doc/current/service_container/compiler_passes.html
-- https://symfony.com/doc/current/service_container/tags.html
-- https://symfonycasts.com/screencast/symfony/services
+- [SymfonyCasts — Services](https://symfonycasts.com/screencast/symfony/services)
+- [Symfony Docs — Compiler Passes](https://symfony.com/doc/current/service_container/compiler_passes.html)
+- [Symfony Docs — Tags](https://symfony.com/doc/current/service_container/tags.html)
+- [Martin Fowler — IoC](https://martinfowler.com/bliki/InversionOfControl.html)
+
+→ kompletní seznam: [zdroje.md](zdroje.md)
