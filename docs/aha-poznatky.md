@@ -16,10 +16,12 @@ Na `/topics` spadla chyba `Doctrine\DBAL\Exception\DriverException` → `could n
 V `php.ini` jsem sice odkomentoval `extension=pdo_sqlite` a `extension=sqlite3`, ale **nerestartoval jsem web server**. `symfony server` běží na pozadí s `php-cgi.exe` — ten se načte jednou a drží starou konfiguraci.
 
 **CLI vs web:**
+
 - `php bin/console` → nový proces → nové php.ini → fungovalo
 - `symfony server` → starý proces → pořád bez driveru → 500 na webu
 
 **Oprava:**
+
 ```powershell
 symfony server:stop
 symfony server:start
@@ -29,6 +31,7 @@ symfony server:start
 Po změně `php.ini` vždy restartovat dev server. Ne jen zavřít terminál — explicitně `server:stop` / `server:start`.
 
 **Kontrola do budoucna:**
+
 ```powershell
 powershell -File check-php.ps1
 symfony php -m | findstr sqlite
@@ -49,4 +52,3 @@ Po instalaci nástroje do PATH často pomůže nové okno PowerShellu.
 
 ---
 
-*Přidávám další záznamy, jak narážím na problémy.*
