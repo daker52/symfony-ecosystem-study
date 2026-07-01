@@ -60,8 +60,8 @@ Odkazy:
 - https://symfony.com/doc/current/setup.html
 
 **Den 2 — konfigurace, services**
-- [ ] services, autowiring, `.env`
-- [ ] bundles, config
+- [x] services, autowiring, `.env`
+- [x] bundles, config
 
 - https://symfony.com/doc/current/configuration.html
 
@@ -190,7 +190,7 @@ Studijní poznámky: [docs/README.md](docs/README.md)
 | den | téma | hotovo | poznámka |
 |-----|------|--------|----------|
 | 1 | Symfony základy | x | [den-01](docs/den-01.md) |
-| 2 | konfigurace | | |
+| 2 | konfigurace, DI | x | [den-02](docs/den-02.md) |
 | 3 | DI | | |
 | 4 | Doctrine | | |
 | 5 | Console | | |

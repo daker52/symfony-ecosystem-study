@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Services & DI — den 2{% endblock %}
+
+{% block body %}
+    <main style="max-width: 720px; margin: 2rem auto; font-family: system-ui, sans-serif; line-height: 1.5;">
+        <h1>Services &amp; DI</h1>
+        <p>Den 2 — služby vložené přes konstruktor, konfigurace v <code>services.yaml</code>.</p>
+
+        <h2>Greeting service</h2>
+        <p><strong>{{ greeting }}</strong></p>
+        <p>
+            Implementace: <code>FormalGreetingGenerator</code> navázaná na
+            <code>GreetingGeneratorInterface</code> v <code>services.yaml</code>.
+        </p>
+
+        <h2>Parametry z configu</h2>
+        <ul>
+            <li>Projekt: <code>{{ study.title }}</code></li>
+            <li>Den studia: <code>{{ study.day }}</code></li>
+            <li>Prostředí: <code>{{ study.environment }}</code> (z <code>.env</code> → <code>%kernel.environment%</code>)</li>
+        </ul>
+
+        <p>
+            <a href="{{ path('app_api_greeting', { name: 'daker52' }) }}">API greeting JSON</a>
+            ·
+            <a href="{{ path('app_home') }}">Home</a>
+        </p>
+    </main>
+{% endblock %}
