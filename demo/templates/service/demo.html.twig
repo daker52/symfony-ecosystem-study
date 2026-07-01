@@ -7,12 +7,30 @@
         <h1>Services &amp; DI</h1>
         <p>Den 2 — služby vložené přes konstruktor, konfigurace v <code>services.yaml</code>.</p>
 
-        <h2>Greeting service</h2>
+        <h2>Greeting service (výchozí binding)</h2>
         <p><strong>{{ greeting }}</strong></p>
         <p>
             Implementace: <code>FormalGreetingGenerator</code> navázaná na
             <code>GreetingGeneratorInterface</code> v <code>services.yaml</code>.
         </p>
+
+        <h2>Compiler pass — všechny generátory s tagem</h2>
+        <p>
+            Tag <code>app.greeting_generator</code> + <code>GreetingGeneratorPass</code>
+            při kompilaci containeru naplní <code>GreetingRegistry</code>.
+        </p>
+        <p>Registrované implementace:</p>
+        <ul>
+            {% for name in registeredGenerators %}
+                <li><code>{{ name }}</code></li>
+            {% endfor %}
+        </ul>
+        <p>Výstupy všech:</p>
+        <ul>
+            {% for message in allGreetings %}
+                <li>{{ message }}</li>
+            {% endfor %}
+        </ul>
 
         <h2>Parametry z configu</h2>
         <ul>

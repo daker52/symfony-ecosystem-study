@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use App\Contract\GreetingGeneratorInterface;
+use App\Service\GreetingRegistry;
 use App\Service\StudyInfoProvider;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
@@ -13,6 +14,7 @@ final class ServiceDemoController extends AbstractController
 {
     public function __construct(
         private GreetingGeneratorInterface $greetingGenerator,
+        private GreetingRegistry $greetingRegistry,
         private StudyInfoProvider $studyInfo,
     ) {
     }
@@ -22,6 +24,8 @@ final class ServiceDemoController extends AbstractController
     {
         return $this->render('service/demo.html.twig', [
             'greeting' => $this->greetingGenerator->greet('studující'),
+            'allGreetings' => $this->greetingRegistry->greetAll('studující'),
+            'registeredGenerators' => $this->greetingRegistry->getImplementationNames(),
             'study' => $this->studyInfo->toArray(),
         ]);
     }

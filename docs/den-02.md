@@ -145,3 +145,5 @@ V plánu mám ještě víc DI (tagy) — ale základy mám. Den 3 můžu buď pr
 
 - `CasualGreetingGenerator` existuje schválně — ukázka že můžu přepnout binding na jinou implementaci bez změny controlleru.
 - Když `lint:container` projde, container je OK.
+
+**Dodatek:** [Compiler Pass](den-02-dodatek-compiler-pass.md) — tagy, `GreetingGeneratorPass`, `GreetingRegistry`

@@ -25,6 +25,12 @@ services:
     # interface → implementace (jako bind v Laravel AppServiceProvider)
     App\Contract\GreetingGeneratorInterface: '@App\Service\FormalGreetingGenerator'
 
+    App\Service\FormalGreetingGenerator:
+        tags: ['app.greeting_generator']
+
+    App\Service\CasualGreetingGenerator:
+        tags: ['app.greeting_generator']
+
     App\Service\StudyInfoProvider:
         arguments:
             $studyTitle: '%app.study.title%'
