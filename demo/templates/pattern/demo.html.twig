@@ -1,0 +1,42 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Design patterns — den 5{% endblock %}
+
+{% block body %}
+    <main style="max-width: 800px; margin: 2rem auto; font-family: system-ui, sans-serif; line-height: 1.5;">
+        <h1>Design patterns v demo</h1>
+        <p>Den 5 — kde se patterns reálně používají v tomhle projektu.</p>
+
+        <table border="1" cellpadding="8" cellspacing="0" style="border-collapse: collapse; width: 100%;">
+            <thead>
+                <tr>
+                    <th>Pattern</th>
+                    <th>Kde v demo</th>
+                    <th>Laravel analogie</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in patterns %}
+                    <tr>
+                        <td><strong>{{ row.pattern }}</strong></td>
+                        <td><code>{{ row.where }}</code></td>
+                        <td>{{ row.laravel }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <h2>Factory + Strategy v akci</h2>
+        <ul>
+            <li>Formal: <em>{{ formalGreeting }}</em></li>
+            <li>Casual: <em>{{ casualGreeting }}</em></li>
+        </ul>
+
+        <h2>Console (Command pattern)</h2>
+        <pre>php bin/console app:hello daker52 --shout
+php bin/console app:study:list --day=3 --json
+php bin/console app:greet daker52 --style=casual</pre>
+
+        <p><a href="{{ path('app_home') }}">← Home</a></p>
+    </main>
+{% endblock %}

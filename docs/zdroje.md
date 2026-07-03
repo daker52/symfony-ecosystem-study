@@ -93,7 +93,37 @@ Seznam materiálů, které používám k učení. Není to exhaustivní — spí
 
 ---
 
-## Plánované (den 4+)
+## Den 4 — Console
+
+**SymfonyCasts:**
+- [Console Commands](https://symfonycasts.com/screencast/symfony/console-command)
+
+**Docs:**
+- [Console](https://symfony.com/doc/current/console.html)
+- [Console Input](https://symfony.com/doc/current/console/input.html)
+
+**Patterns:**
+- [Command pattern](https://refactoring.guru/design-patterns/command)
+
+---
+
+## Den 5 — Design patterns
+
+**Refactoring Guru:**
+- [Design Patterns catalog](https://refactoring.guru/design-patterns)
+- [Design Patterns in PHP](https://refactoring.guru/design-patterns/php)
+- [Strategy](https://refactoring.guru/design-patterns/strategy)
+- [Factory Method](https://refactoring.guru/design-patterns/factory-method)
+- [Decorator](https://refactoring.guru/design-patterns/decorator)
+- [Observer](https://refactoring.guru/design-patterns/observer)
+- [Repository](https://refactoring.guru/design-patterns/repository)
+
+**Symfony:**
+- [Doctrine Events / Listeners](https://symfony.com/doc/current/doctrine/events.html)
+
+---
+
+## Plánované (den 6+)
 
 | Téma | Zdroj |
 |------|-------|

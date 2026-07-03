@@ -7,7 +7,14 @@
         <h1>{{ title }}</h1>
         <p>První den — routing, controller, Twig. Projekt běží, struktura sedí.</p>
 
+        <h2>Console příkazy (den 4)</h2>
+        <pre style="background:#f4f4f4;padding:1rem;">php bin/console app:hello daker52
+php bin/console app:hello daker52 --shout
+php bin/console app:study:list --day=3
+php bin/console app:study:seed</pre>
+
         <ul>
+            <li><a href="{{ path('app_patterns_demo') }}">Design patterns demo (den 5)</a></li>
             <li><a href="{{ path('app_topics_index') }}">Study topics — Doctrine (den 3)</a></li>
             <li><a href="{{ path('app_services_demo') }}">Services &amp; DI demo (den 2)</a></li>
             <li><a href="{{ path('app_about') }}">About</a></li>

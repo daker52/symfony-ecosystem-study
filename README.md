@@ -80,20 +80,21 @@ Odkazy:
 **Den 3 (původně DI)** — pokryto v [den 2](docs/den-02.md) + [compiler pass](docs/den-02-dodatek-compiler-pass.md)
 
 **Den 4 — Console**
-- [ ] vlastní command `app:hello`
-- [ ] argumenty, options, DI v commandu
+- [x] vlastní command `app:hello`
+- [x] argumenty, options, DI v commandu
+- [x] `app:study:list` — DB dotaz z CLI
 
 - https://symfonycasts.com/screencast/symfony/console-command
 - https://refactoring.guru/design-patterns/command
 
-**Den 6 — design patterns**
-- [ ] projít: Strategy, Factory, Repository, Observer, Decorator, Command
-- [ ] najít kde se to v Symfony reálně používá
+**Den 5 — design patterns**
+- [x] Strategy, Factory, Decorator, Repository, Observer, Command
+- [x] ukázka v demo — `/patterns-demo`
 
 - https://refactoring.guru/design-patterns
 - https://refactoring.guru/design-patterns/php
 
-**Den 7 — DDD + CQRS**
+**Den 6 — DDD + CQRS**
 - [ ] Entity, Value Object, Aggregate (teorie)
 - [ ] Command vs Query
 - [ ] Messenger jako transport
@@ -188,9 +189,9 @@ Studijní poznámky: [docs/README.md](docs/README.md)
 | 1 | Symfony základy | x | [den-01](docs/den-01.md) |
 | 2 | konfigurace, DI | x | [den-02](docs/den-02.md) |
 | 3 | Doctrine ORM | x | [den-03](docs/den-03.md) |
-| 4 | Console | | |
-| 6 | patterns | | |
-| 7 | DDD + CQRS | | |
+| 4 | Console | x | [den-04](docs/den-04.md) |
+| 5 | design patterns | x | [den-05](docs/den-05.md) |
+| 6 | DDD + CQRS | | |
 | 8 | Vue + TS | | |
 | 9 | Vite | | |
 | 10 | RabbitMQ | | |
