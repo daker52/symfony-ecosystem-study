@@ -12,3 +12,5 @@ Krátké poznámky z učení — hlavně pro mě, ať vidím progres.
 | 3 | Doctrine ORM | [den-03.md](den-03.md) |
 | 4 | Symfony Console | [den-04.md](den-04.md) |
 | 5 | Design patterns | [den-05.md](den-05.md) |
+| 6 | DDD + CQRS + Messenger | [den-06.md](den-06.md) |
+| 7 | Fixtures + async | [den-07.md](den-07.md) |

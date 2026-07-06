@@ -1,0 +1,72 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}DDD + CQRS — den 6{% endblock %}
+
+{% block body %}
+    <main style="max-width: 800px; margin: 2rem auto; font-family: system-ui, sans-serif; line-height: 1.5;">
+        <h1>DDD + CQRS demo</h1>
+        <p>
+            Command jde do <code>command.bus</code> → async fronta (Doctrine transport).
+            Query jde do <code>query.bus</code> → sync handler.
+        </p>
+
+        <h2>Vytvořit topic (Command)</h2>
+        <form id="create-form" style="display: grid; gap: 0.5rem; max-width: 420px;">
+            <input name="title" placeholder="Název" required>
+            <input name="slug" placeholder="slug-v-kebab-case" required>
+            <textarea name="body" placeholder="Obsah" rows="3" required></textarea>
+            <input name="day" type="number" value="6" min="1" max="14">
+            <button type="submit">Odeslat CreateStudyTopicCommand</button>
+        </form>
+        <pre id="create-result" style="background:#f4f4f4;padding:1rem;margin-top:1rem;"></pre>
+
+        <h2>Načíst topic (Query)</h2>
+        <form id="query-form" style="display: flex; gap: 0.5rem;">
+            <input name="slug" placeholder="routing-v-symfony" required>
+            <button type="submit">GetStudyTopicQuery</button>
+        </form>
+        <pre id="query-result" style="background:#f4f4f4;padding:1rem;margin-top:1rem;"></pre>
+
+        <h2>Async worker</h2>
+        <pre>php bin/console messenger:consume async -vv</pre>
+        <p>Bez workeru zůstane command ve frontě — API vrátí 202 Accepted.</p>
+
+        <h2>Co je v kódu</h2>
+        <ul>
+            <li><code>TopicSlug</code> — Value Object (validace slug)</li>
+            <li><code>CreateStudyTopicCommand</code> + handler — zápis</li>
+            <li><code>GetStudyTopicQuery</code> + handler — čtení</li>
+            <li><code>StudyTopicCreatedMessage</code> — async notifikace (den 7)</li>
+        </ul>
+
+        <p><a href="{{ path('app_home') }}">← Home</a></p>
+    </main>
+
+    <script>
+        const createForm = document.getElementById('create-form');
+        const queryForm = document.getElementById('query-form');
+        const createResult = document.getElementById('create-result');
+        const queryResult = document.getElementById('query-result');
+
+        createForm.addEventListener('submit', async (event) => {
+            event.preventDefault();
+            const data = Object.fromEntries(new FormData(createForm).entries());
+            data.day = Number(data.day);
+
+            const response = await fetch('{{ path('app_cqrs_create') }}', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(data),
+            });
+
+            createResult.textContent = JSON.stringify(await response.json(), null, 2);
+        });
+
+        queryForm.addEventListener('submit', async (event) => {
+            event.preventDefault();
+            const slug = new FormData(queryForm).get('slug');
+            const response = await fetch(`{{ path('app_cqrs_get', { slug: '__SLUG__' }) }}`.replace('__SLUG__', slug));
+            queryResult.textContent = JSON.stringify(await response.json(), null, 2);
+        });
+    </script>
+{% endblock %}

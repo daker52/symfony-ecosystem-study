@@ -95,14 +95,22 @@ Odkazy:
 - https://refactoring.guru/design-patterns/php
 
 **Den 6 — DDD + CQRS**
-- [ ] Entity, Value Object, Aggregate (teorie)
-- [ ] Command vs Query
-- [ ] Messenger jako transport
-- [ ] zkusit: `CreateUserCommand` + `GetUserQuery`
+- [x] Entity, Value Object, Aggregate (teorie)
+- [x] Command vs Query
+- [x] Messenger jako transport
+- [x] `CreateStudyTopicCommand` + `GetStudyTopicQuery`
 
 - https://martinfowler.com/bliki/CQRS.html
 - https://symfonycasts.com/screencast/messenger
 - https://symfony.com/doc/current/messenger.html
+
+**Den 7 — Fixtures + async**
+- [x] DoctrineFixturesBundle
+- [x] `StudyDataFixtures` + `doctrine:fixtures:load`
+- [x] async `StudyTopicCreatedMessage` + worker
+
+- https://symfony.com/bundles/DoctrineFixturesBundle/current/index.html
+- https://symfonycasts.com/screencast/symfony-doctrine/persisting-fixtures
 
 ### Týden 2
 
@@ -191,7 +199,8 @@ Studijní poznámky: [docs/README.md](docs/README.md)
 | 3 | Doctrine ORM | x | [den-03](docs/den-03.md) |
 | 4 | Console | x | [den-04](docs/den-04.md) |
 | 5 | design patterns | x | [den-05](docs/den-05.md) |
-| 6 | DDD + CQRS | | |
+| 6 | DDD + CQRS | x | [den-06](docs/den-06.md) |
+| 7 | Fixtures + async | x | [den-07](docs/den-07.md) |
 | 8 | Vue + TS | | |
 | 9 | Vite | | |
 | 10 | RabbitMQ | | |

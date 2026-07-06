@@ -123,15 +123,42 @@ Seznam materiálů, které používám k učení. Není to exhaustivní — spí
 
 ---
 
-## Plánované (den 6+)
+## Den 6 — DDD + CQRS + Messenger
+
+**SymfonyCasts:**
+- [Messenger](https://symfonycasts.com/screencast/messenger)
+
+**Docs:**
+- [Messenger](https://symfony.com/doc/current/messenger.html)
+- [Multiple buses](https://symfony.com/doc/current/messenger.html#multiple-buses)
+
+**Teorie:**
+- [CQRS — Martin Fowler](https://martinfowler.com/bliki/CQRS.html)
+- [DDD Aggregate — Martin Fowler](https://martinfowler.com/bliki/DDD_Aggregate.html)
+- [Value Object — Martin Fowler](https://martinfowler.com/bliki/ValueObject.html)
+
+---
+
+## Den 7 — Fixtures + async
+
+**SymfonyCasts:**
+- [Persisting Fixtures](https://symfonycasts.com/screencast/symfony-doctrine/persisting-fixtures)
+
+**Docs:**
+- [DoctrineFixturesBundle](https://symfony.com/bundles/DoctrineFixturesBundle/current/index.html)
+- [Messenger — consuming](https://symfony.com/doc/current/messenger.html#consuming-messages-running-the-worker)
+
+**Další (plánuju):**
+- [Zenstruck Foundry](https://github.com/zenstruck/foundry) — factory nad fixtures
+
+---
+
+## Plánované (den 8+)
 
 | Téma | Zdroj |
 |------|-------|
-| Console | [SymfonyCasts — Console](https://symfonycasts.com/screencast/symfony/console-command) |
-| Messenger / CQRS | [SymfonyCasts — Messenger](https://symfonycasts.com/screencast/messenger) |
-| DDD | [Martin Fowler — DDD Aggregate](https://martinfowler.com/bliki/DDD_Aggregate.html) |
-| Mago | [mago.carthage.software](https://mago.carthage.software/latest/en/) |
 | Vue + TS | [vuejs.org guide](https://vuejs.org/guide/introduction.html) |
+| Mago | [mago.carthage.software](https://mago.carthage.software/latest/en/) |
 
 ---
 

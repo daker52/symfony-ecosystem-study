@@ -14,7 +14,7 @@ final class HomeController extends AbstractController
     public function index(): Response
     {
         return $this->render('home/index.html.twig', [
-            'title' => 'Symfony study — den 5',
+            'title' => 'Symfony study — den 7',
         ]);
     }
 
@@ -22,9 +22,10 @@ final class HomeController extends AbstractController
     public function about(): Response
     {
         $topics = [
-            'Symfony Console — app:hello, app:study:list',
-            'Design patterns — Strategy, Factory, Decorator',
-            'Doctrine, DI (dny 2–3)',
+            'Doctrine Fixtures — doctrine:fixtures:load',
+            'Messenger async — messenger:consume async',
+            'CQRS — command.bus vs query.bus',
+            'Console, patterns, Doctrine (dny 2–5)',
         ];
 
         return $this->render('home/about.html.twig', [
@@ -57,7 +58,7 @@ final class HomeController extends AbstractController
             'php' => PHP_VERSION,
             'symfony' => Kernel::VERSION,
             'app' => 'symfony-ecosystem-study',
-            'day' => 5,
+            'day' => 7,
         ]);
     }
 }

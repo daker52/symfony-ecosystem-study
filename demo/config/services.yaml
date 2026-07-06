@@ -5,7 +5,7 @@
 # https://symfony.com/doc/current/best_practices.html#use-parameters-for-application-configuration
 parameters:
     app.study.title: 'symfony-ecosystem-study'
-    app.study.day: 5
+    app.study.day: 7
 
 services:
     # default configuration for services in *this* file
@@ -36,6 +36,15 @@ services:
             $studyTitle: '%app.study.title%'
             $studyDay: '%app.study.day%'
             $appEnv: '%kernel.environment%'
+
+    App\Controller\CqrsDemoController:
+        bind:
+            Symfony\Component\Messenger\MessageBusInterface $commandBus: '@command.bus'
+            Symfony\Component\Messenger\MessageBusInterface $queryBus: '@query.bus'
+
+    App\MessageHandler\Command\CreateStudyTopicHandler:
+        bind:
+            Symfony\Component\Messenger\MessageBusInterface $commandBus: '@command.bus'
 
     # add more service definitions when explicit configuration is needed
     # please note that last definitions always *replace* previous ones

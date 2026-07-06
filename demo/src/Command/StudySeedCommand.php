@@ -13,7 +13,7 @@ use Symfony\Component\Console\Style\SymfonyStyle;
 
 #[AsCommand(
     name: 'app:study:seed',
-    description: 'Naplní DB ukázkovými study topics (den 1–3)',
+    description: 'Naplní DB ukázkovými study topics — preferuj doctrine:fixtures:load',
 )]
 final class StudySeedCommand extends Command
 {
@@ -29,7 +29,7 @@ final class StudySeedCommand extends Command
 
         $repo = $this->entityManager->getRepository(StudyTopic::class);
         if ($repo->count([]) > 0) {
-            $io->warning('DB už obsahuje topics — seed přeskočen.');
+            $io->warning('DB už obsahuje topics — seed přeskočen. Použij: doctrine:fixtures:load');
 
             return Command::SUCCESS;
         }
@@ -38,6 +38,8 @@ final class StudySeedCommand extends Command
             1 => new StudyDay(1, 'Symfony základy'),
             2 => new StudyDay(2, 'Services & DI'),
             3 => new StudyDay(3, 'Doctrine ORM'),
+            4 => new StudyDay(4, 'Symfony Console'),
+            5 => new StudyDay(5, 'Design patterns'),
         ];
 
         foreach ($days as $day) {
