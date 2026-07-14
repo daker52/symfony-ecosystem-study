@@ -1,0 +1,11 @@
+{
+  "vite-entry.ts": {
+    "file": "assets/app-Bnra-EX0.js",
+    "name": "app",
+    "src": "vite-entry.ts",
+    "isEntry": true,
+    "css": [
+      "assets/app-DxV-JXiB.css"
+    ]
+  }
+}

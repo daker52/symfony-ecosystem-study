@@ -14,7 +14,7 @@ final class HomeController extends AbstractController
     public function index(): Response
     {
         return $this->render('home/index.html.twig', [
-            'title' => 'Symfony study — den 7',
+            'title' => 'Symfony study — den 13',
         ]);
     }
 
@@ -22,10 +22,11 @@ final class HomeController extends AbstractController
     public function about(): Response
     {
         $topics = [
-            'Doctrine Fixtures — doctrine:fixtures:load',
-            'Messenger async — messenger:consume async',
-            'CQRS — command.bus vs query.bus',
-            'Console, patterns, Doctrine (dny 2–5)',
+            'Vue + TS + Vite + SASS (dny 8–9, 13)',
+            'RabbitMQ / AMQP transport (den 10)',
+            'JWT Lexik + Security (den 11)',
+            'PHPStan + GitHub Actions CI (den 12)',
+            'CQRS, Fixtures, Doctrine, DI (dny 1–7)',
         ];
 
         return $this->render('home/about.html.twig', [
@@ -44,6 +45,9 @@ final class HomeController extends AbstractController
             ['laravel' => 'app/Providers', 'symfony' => 'config/services.yaml'],
             ['laravel' => 'public/index.php', 'symfony' => 'public/index.php'],
             ['laravel' => 'php artisan', 'symfony' => 'php bin/console'],
+            ['laravel' => 'Jobs / queue:work', 'symfony' => 'Messenger / messenger:consume'],
+            ['laravel' => 'Sanctum / Passport', 'symfony' => 'Lexik JWT + Security'],
+            ['laravel' => 'Vite + Vue', 'symfony' => 'Vite + Vue (+ AssetMapper paralel)'],
         ];
 
         return $this->render('home/laravel_map.html.twig', [
@@ -58,7 +62,7 @@ final class HomeController extends AbstractController
             'php' => PHP_VERSION,
             'symfony' => Kernel::VERSION,
             'app' => 'symfony-ecosystem-study',
-            'day' => 7,
+            'day' => 13,
         ]);
     }
 }

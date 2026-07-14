@@ -5,24 +5,33 @@
 {% block body %}
     <main style="max-width: 720px; margin: 2rem auto; font-family: system-ui, sans-serif; line-height: 1.5;">
         <h1>{{ title }}</h1>
-        <p>Den 7 — Fixtures + async Messenger. Projekt běží, CQRS a fronty fungují.</p>
+        <p>Týden 2 hotový — Vue/Vite/SASS, RabbitMQ, JWT, PHPStan/CI.</p>
 
-        <h2>Console příkazy</h2>
+        <h2>Frontend (dny 8–9, 13)</h2>
+        <pre style="background:#f4f4f4;padding:1rem;">cd demo
+npm install
+npm run build
+# HMR: VITE_DEV_SERVER=1 + npm run dev</pre>
+
+        <h2>JWT (den 11)</h2>
         <pre style="background:#f4f4f4;padding:1rem;">php bin/console doctrine:fixtures:load --no-interaction
-php bin/console messenger:consume async -vv
-php bin/console app:hello daker52
-php bin/console app:study:list --day=3</pre>
+# study@example.com / study123
+# POST /api/login → Bearer → GET /api/me</pre>
+
+        <h2>RabbitMQ (den 10)</h2>
+        <pre style="background:#f4f4f4;padding:1rem;">docker compose -f docker-compose.rabbitmq.yml up -d
+# UI http://localhost:15672  guest/guest
+# pak AMQP DSN v .env</pre>
 
         <ul>
+            <li><a href="{{ path('app_vue_demo') }}">Vue + Vite + SASS demo</a></li>
+            <li><a href="{{ path('app_jwt_demo') }}">JWT demo</a></li>
             <li><a href="{{ path('app_cqrs_demo') }}">CQRS demo (den 6)</a></li>
-            <li><a href="{{ path('app_patterns_demo') }}">Design patterns demo (den 5)</a></li>
-            <li><a href="{{ path('app_topics_index') }}">Study topics — Doctrine (den 3)</a></li>
-            <li><a href="{{ path('app_services_demo') }}">Services &amp; DI demo (den 2)</a></li>
+            <li><a href="{{ path('app_patterns_demo') }}">Design patterns (den 5)</a></li>
+            <li><a href="{{ path('app_topics_index') }}">Study topics — Doctrine</a></li>
+            <li><a href="{{ path('app_services_demo') }}">Services &amp; DI</a></li>
             <li><a href="{{ path('app_about') }}">About</a></li>
             <li><a href="{{ path('app_laravel_map') }}">Laravel → Symfony mapa</a></li>
-            <li><a href="{{ path('app_study_topic', { topic: 'routing' }) }}">Study: routing</a></li>
-            <li><a href="{{ path('app_study_topic', { topic: 'twig' }) }}">Study: twig</a></li>
-            <li><a href="{{ path('app_api_ping') }}">API ping (JSON)</a></li>
             <li><a href="{{ path('app_api_version') }}">API version (JSON)</a></li>
         </ul>
     </main>

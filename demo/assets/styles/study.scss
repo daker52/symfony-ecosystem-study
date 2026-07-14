@@ -1,0 +1,90 @@
+// Den 13 — SASS: proměnné, nesting, mixiny
+// (základní funkce bez @use — méně třenice s Vite sass)
+
+$study-bg: #f7f5f1;
+$study-ink: #1a1a1a;
+$study-accent: #0b6e4f;
+$study-muted: #5c5c5c;
+$study-radius: 6px;
+$study-border: #e4dfd6;
+
+@mixin card-surface {
+  background: #fff;
+  border: 1px solid $study-border;
+  border-radius: $study-radius;
+  padding: 0.85rem 1rem;
+}
+
+.vue-study {
+  max-width: 720px;
+  margin: 2rem auto;
+  font-family: Georgia, 'Times New Roman', serif;
+  color: $study-ink;
+  background: linear-gradient(160deg, $study-bg, #fbfaf7);
+  padding: 1.5rem;
+  border-radius: $study-radius * 2;
+
+  &__header {
+    margin-bottom: 1rem;
+
+    h2 {
+      margin: 0 0 0.35rem;
+      color: $study-accent;
+    }
+
+    p {
+      margin: 0;
+      color: $study-muted;
+      font-size: 0.95rem;
+    }
+  }
+
+  &__filter {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+
+    input {
+      padding: 0.5rem 0.65rem;
+      border: 1px solid $study-border;
+      border-radius: $study-radius;
+      font: inherit;
+    }
+  }
+
+  &__error {
+    color: #8b1e1e;
+  }
+
+  &__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: 0.75rem;
+  }
+}
+
+.topic-card {
+  @include card-surface;
+
+  strong {
+    display: block;
+    color: $study-ink;
+  }
+
+  &__meta {
+    display: block;
+    font-size: 0.8rem;
+    color: $study-muted;
+    margin: 0.25rem 0 0.5rem;
+  }
+
+  p {
+    margin: 0;
+    line-height: 1.45;
+    color: $study-muted;
+  }
+}

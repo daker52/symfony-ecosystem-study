@@ -1,0 +1,12 @@
+# Mago — den 12
+# Instalace (lokálně): https://mago.carthage.software/latest/en/
+#   mago init
+#   mago analyze
+#
+# V CI zatím primárně PHPStan — Mago si držíme jako další nástroj týmu.
+# Když máš mago v PATH:
+#   cd demo && mago analyze src
+
+[source]
+paths = ["src"]
+excludes = ["var", "vendor", "public/build"]

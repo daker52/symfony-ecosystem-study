@@ -52,3 +52,26 @@ Po instalaci nástroje do PATH často pomůže nové okno PowerShellu.
 
 ---
 
+## Den 11 — OpenSSL klíče pro Lexik JWT na Windows
+
+**Co se stalo:**  
+`openssl` není v PATH. PHP `openssl_pkey_new()` skončil chybou `system library::No such process`.
+
+**Co jsem udělal:**  
+Pro studium Lexik nastaven na **HS256** (shared secret v `.env`). RS256 + PEM znám jako produkční standard a mám to zapsané v den-11.
+
+**Aha:**  
+Auth setup má víc cest — důležitější je pochopit firewall flow (json_login → token → Bearer) než ulpnout na generování RSA klíčů den jedna.
+
+---
+
+## Den 9 — Vite manifest path
+
+**Co se stalo:**  
+Vite 6 dává manifest do `public/build/.vite/manifest.json`, ne rovnou `manifest.json`.
+
+**Oprava:**  
+`ViteAssetMapper` zkouší obě cesty.
+
+---
+

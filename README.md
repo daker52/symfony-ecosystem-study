@@ -115,46 +115,46 @@ Odkazy:
 ### Týden 2
 
 **Den 8 — Vue + TypeScript**
-- [ ] Composition API (`ref`, `computed`)
-- [ ] komponenty, props
-- [ ] typy u API response
+- [x] Composition API (`ref`, `computed`)
+- [x] komponenty, props
+- [x] typy u API response (`StudyTopicDto`)
 
 - https://vuejs.org/guide/introduction.html
 - https://www.typescriptlang.org/docs/handbook/intro.html
 
 **Den 9 — Vite / Webpack v Symfony**
-- [ ] build pipeline `assets/` → `public/build/`
-- [ ] rozdíl Vite vs Webpack Encore
+- [x] build pipeline `assets/` → `public/build/`
+- [x] Vite vedle AssetMapper + `vite_js()` helper
 
 - https://vite.dev/guide/
 - https://symfony.com/doc/current/frontend.html
 
 **Den 10 — RabbitMQ**
-- [ ] co je broker, queue, exchange
-- [ ] Message → Handler → transport
-- [ ] analogie k Laravel Jobs
+- [x] broker, queue, exchange (teorie)
+- [x] Message → Handler → transport (Doctrine ↔ AMQP DSN)
+- [x] `docker-compose.rabbitmq.yml`
 
 - https://www.rabbitmq.com/tutorials
 - https://symfony.com/doc/current/messenger.html#amqp-transport
 
 **Den 11 — JWT + Security**
-- [ ] firewall, authenticator
-- [ ] login → token → API request
+- [x] firewall, json_login, jwt
+- [x] login → token → `/api/me`
 
 - https://symfony.com/doc/current/security.html
 - https://github.com/lexik/LexikJWTAuthenticationBundle
 
 **Den 12 — PHPStan, Mago, CI**
-- [ ] spustit PHPStan, opravit typy
-- [ ] `mago init`, `mago analyze`
-- [ ] základní CI pipeline
+- [x] PHPStan level 5 (0 errors)
+- [x] `mago.toml` připravený
+- [x] GitHub Actions CI (PHPStan + Vite build)
 
 - https://phpstan.org/user-guide/getting-started
 - https://mago.carthage.software/latest/en/
 
 **Den 13 — SASS / LESS**
-- [ ] proměnné, nesting, mixiny
-- [ ] napojit do Vite
+- [x] proměnné, nesting, mixiny
+- [x] napojeno do Vite (`study.scss`)
 
 - https://sass-lang.com/documentation/
 
@@ -201,12 +201,12 @@ Studijní poznámky: [docs/README.md](docs/README.md)
 | 5 | design patterns | x | [den-05](docs/den-05.md) |
 | 6 | DDD + CQRS | x | [den-06](docs/den-06.md) |
 | 7 | Fixtures + async | x | [den-07](docs/den-07.md) |
-| 8 | Vue + TS | | |
-| 9 | Vite | | |
-| 10 | RabbitMQ | | |
-| 11 | JWT | | |
-| 12 | PHPStan + Mago | | |
-| 13 | SASS | | |
+| 8 | Vue + TS | x | [den-08](docs/den-08.md) |
+| 9 | Vite | x | [den-09](docs/den-09.md) |
+| 10 | RabbitMQ | x | [den-10](docs/den-10.md) |
+| 11 | JWT | x | [den-11](docs/den-11.md) |
+| 12 | PHPStan + Mago | x | [den-12](docs/den-12.md) |
+| 13 | SASS | x | [den-13](docs/den-13.md) |
 | 14 | demo | | |
 
 ---

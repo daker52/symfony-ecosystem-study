@@ -22,6 +22,12 @@ final class StudyDataFixtures extends Fixture
             5 => new StudyDay(5, 'Design patterns'),
             6 => new StudyDay(6, 'DDD + CQRS'),
             7 => new StudyDay(7, 'Fixtures & async'),
+            8 => new StudyDay(8, 'Vue + TypeScript'),
+            9 => new StudyDay(9, 'Vite build'),
+            10 => new StudyDay(10, 'RabbitMQ'),
+            11 => new StudyDay(11, 'JWT + Security'),
+            12 => new StudyDay(12, 'PHPStan + CI'),
+            13 => new StudyDay(13, 'SASS'),
         ];
 
         foreach ($days as $day) {
@@ -38,6 +44,12 @@ final class StudyDataFixtures extends Fixture
             ['design-patterns', 'Design patterns', 'Strategy, Factory, Decorator v demo.', $days[5]],
             ['cqrs-messenger', 'CQRS + Messenger', 'command.bus, query.bus, async transport.', $days[6]],
             ['doctrine-fixtures', 'Doctrine Fixtures', 'doctrine:fixtures:load místo ručního seedu.', $days[7]],
+            ['vue-composition', 'Vue Composition API', 'ref, computed, typed props z API.', $days[8]],
+            ['vite-pipeline', 'Vite pipeline', 'assets → public/build + manifest.', $days[9]],
+            ['rabbitmq-amqp', 'RabbitMQ / AMQP', 'broker, queue, exchange vs Doctrine transport.', $days[10]],
+            ['jwt-security', 'JWT + Security', 'json_login → Bearer token → /api/me.', $days[11]],
+            ['phpstan-ci', 'PHPStan + CI', 'statická analýza a GitHub Actions.', $days[12]],
+            ['sass-styles', 'SASS styly', 'proměnné, nesting, mixiny přes Vite.', $days[13]],
         ];
 
         foreach ($topics as [$slug, $title, $body, $day]) {

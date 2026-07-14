@@ -14,3 +14,9 @@ Krátké poznámky z učení — hlavně pro mě, ať vidím progres.
 | 5 | Design patterns | [den-05.md](den-05.md) |
 | 6 | DDD + CQRS + Messenger | [den-06.md](den-06.md) |
 | 7 | Fixtures + async | [den-07.md](den-07.md) |
+| 8 | Vue + TypeScript | [den-08.md](den-08.md) |
+| 9 | Vite build pipeline | [den-09.md](den-09.md) |
+| 10 | RabbitMQ / AMQP | [den-10.md](den-10.md) |
+| 11 | JWT + Security | [den-11.md](den-11.md) |
+| 12 | PHPStan, Mago, CI | [den-12.md](den-12.md) |
+| 13 | SASS | [den-13.md](den-13.md) |

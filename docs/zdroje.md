@@ -153,12 +153,54 @@ Seznam materiálů, které používám k učení. Není to exhaustivní — spí
 
 ---
 
-## Plánované (den 8+)
+## Den 8 — Vue + TypeScript
+
+- [Vue guide](https://vuejs.org/guide/introduction.html)
+- [Composition API](https://vuejs.org/guide/extras/composition-api-faq.html)
+- [TypeScript handbook](https://www.typescriptlang.org/docs/handbook/intro.html)
+
+---
+
+## Den 9 — Vite
+
+- [Vite guide](https://vite.dev/guide/)
+- [Symfony frontend](https://symfony.com/doc/current/frontend.html)
+
+---
+
+## Den 10 — RabbitMQ
+
+- [RabbitMQ tutorials](https://www.rabbitmq.com/tutorials)
+- [AMQP transport](https://symfony.com/doc/current/messenger.html#amqp-transport)
+
+---
+
+## Den 11 — JWT
+
+- [Symfony Security](https://symfony.com/doc/current/security.html)
+- [LexikJWTAuthenticationBundle](https://github.com/lexik/LexikJWTAuthenticationBundle)
+
+---
+
+## Den 12 — PHPStan / Mago / CI
+
+- [PHPStan](https://phpstan.org/user-guide/getting-started)
+- [Mago](https://mago.carthage.software/latest/en/)
+
+---
+
+## Den 13 — SASS
+
+- [Sass docs](https://sass-lang.com/documentation/)
+- [Less](https://lesscss.org/)
+
+---
+
+## Plánované (den 14)
 
 | Téma | Zdroj |
 |------|-------|
-| Vue + TS | [vuejs.org guide](https://vuejs.org/guide/introduction.html) |
-| Mago | [mago.carthage.software](https://mago.carthage.software/latest/en/) |
+| Finální demo | vlastní `demo/` + deník |
 
 ---
 

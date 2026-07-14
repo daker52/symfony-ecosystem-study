@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Vue + TypeScript — den 8–9{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    {% if vite_dev() %}
+        {# HMR CSS jde přes Vite client #}
+    {% else %}
+        {% for href in vite_css('vite-entry.ts') %}
+            <link rel="stylesheet" href="{{ href }}">
+        {% endfor %}
+    {% endif %}
+{% endblock %}
+
+{% block javascripts %}
+    {% if vite_dev() %}
+        <script type="module" src="http://localhost:5173/@vite/client"></script>
+        <script type="module" src="{{ vite_js('vite-entry.ts') }}"></script>
+    {% else %}
+        <script type="module" src="{{ vite_js('vite-entry.ts') }}"></script>
+    {% endif %}
+{% endblock %}
+
+{% block body %}
+    <main style="max-width: 720px; margin: 1rem auto; font-family: system-ui, sans-serif;">
+        <p><a href="{{ path('app_home') }}">← Home</a></p>
+        <p style="color:#555;">Den 8–9 / 13 — Vue Composition API + Vite build + SASS styly.</p>
+    </main>
+
+    <div
+        id="vue-study-app"
+        data-api-url="{{ path('app_api_study_topics') }}"
+    ></div>
+{% endblock %}
