@@ -14,7 +14,7 @@ final class HomeController extends AbstractController
     public function index(): Response
     {
         return $this->render('home/index.html.twig', [
-            'title' => 'Symfony study — den 13',
+            'title' => 'Symfony study — den 14 · Pulse',
         ]);
     }
 
@@ -22,11 +22,10 @@ final class HomeController extends AbstractController
     public function about(): Response
     {
         $topics = [
-            'Vue + TS + Vite + SASS (dny 8–9, 13)',
-            'RabbitMQ / AMQP transport (den 10)',
-            'JWT Lexik + Security (den 11)',
-            'PHPStan + GitHub Actions CI (den 12)',
-            'CQRS, Fixtures, Doctrine, DI (dny 1–7)',
+            'Pulse — JWT + CQRS + Messenger live pipeline',
+            'Vue + TS + Vite + SASS dashboard',
+            'app:pulse:report console command',
+            'PHPStan + CI green',
         ];
 
         return $this->render('home/about.html.twig', [
@@ -62,7 +61,8 @@ final class HomeController extends AbstractController
             'php' => PHP_VERSION,
             'symfony' => Kernel::VERSION,
             'app' => 'symfony-ecosystem-study',
-            'day' => 13,
+            'day' => 14,
+            'demo' => 'pulse',
         ]);
     }
 }

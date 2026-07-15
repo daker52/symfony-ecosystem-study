@@ -4,9 +4,6 @@ framework:
 
         transports:
             # Den 10: DSN z .env — doctrine://… (default) NEBO amqp://… (RabbitMQ)
-            # docker compose -f docker-compose.rabbitmq.yml up -d
-            # MESSENGER_TRANSPORT_DSN=amqp://guest:guest@127.0.0.1:5672/%2f/messages
-            # vyžaduje: composer require symfony/amqp-messenger + ext-amqp
             async:
                 dsn: '%env(MESSENGER_TRANSPORT_DSN)%'
                 retry_strategy:
@@ -27,3 +24,5 @@ framework:
 
             App\Message\Command\CreateStudyTopicCommand: async
             App\Message\Event\StudyTopicCreatedMessage: async
+            # Pulse pipeline — CreateWorkOrder zůstává sync (vrací ID)
+            App\Message\Event\AdvanceWorkOrderMessage: async

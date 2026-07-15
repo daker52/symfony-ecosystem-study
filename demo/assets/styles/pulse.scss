@@ -1,0 +1,236 @@
+$pulse-bg: #0f1410;
+$pulse-ink: #e8f0ea;
+$pulse-muted: #8aa193;
+$pulse-accent: #3ddc97;
+$pulse-warn: #e6b84d;
+$pulse-danger: #e85d5d;
+$pulse-panel: #18201b;
+
+.pulse {
+  max-width: 960px;
+  margin: 0 auto 3rem;
+  padding: 1.5rem;
+  color: $pulse-ink;
+  background:
+    radial-gradient(ellipse at top, rgba(61, 220, 151, 0.12), transparent 55%),
+    linear-gradient(165deg, #101611, $pulse-bg 40%, #0c100e);
+  min-height: 80vh;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+
+  &__hero {
+    margin-bottom: 1.5rem;
+
+    h1 {
+      margin: 0.2rem 0 0.5rem;
+      font-size: 2rem;
+      letter-spacing: -0.02em;
+    }
+  }
+
+  &__brand {
+    margin: 0;
+    color: $pulse-accent;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    font-size: 0.75rem;
+  }
+
+  &__lead {
+    margin: 0;
+    color: $pulse-muted;
+    max-width: 36rem;
+  }
+
+  &__panel {
+    background: $pulse-panel;
+    border: 1px solid rgba(61, 220, 151, 0.15);
+    border-radius: 10px;
+    padding: 1rem 1.1rem;
+    margin-bottom: 1rem;
+
+    h2 {
+      margin: 0 0 0.75rem;
+      font-size: 1rem;
+    }
+  }
+
+  &__form {
+    display: grid;
+    gap: 0.5rem;
+
+    &--row {
+      grid-template-columns: 1fr auto auto;
+
+      @media (max-width: 720px) {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    input,
+    select,
+    button {
+      font: inherit;
+      padding: 0.55rem 0.7rem;
+      border-radius: 6px;
+      border: 1px solid rgba(232, 240, 234, 0.15);
+      background: #101611;
+      color: $pulse-ink;
+    }
+
+    button {
+      background: $pulse-accent;
+      color: #062416;
+      border: none;
+      font-weight: 600;
+      cursor: pointer;
+    }
+  }
+
+  &__toolbar {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 0.75rem;
+  }
+
+  &__ghost {
+    background: transparent;
+    color: $pulse-muted;
+    border: 1px solid rgba(232, 240, 234, 0.2);
+    border-radius: 6px;
+    padding: 0.35rem 0.7rem;
+    cursor: pointer;
+  }
+
+  &__stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+
+    div {
+      background: $pulse-panel;
+      border-radius: 8px;
+      padding: 0.75rem;
+      text-align: center;
+      border: 1px solid rgba(61, 220, 151, 0.12);
+
+      strong {
+        display: block;
+        font-size: 1.4rem;
+        color: $pulse-accent;
+      }
+
+      span {
+        color: $pulse-muted;
+        font-size: 0.8rem;
+      }
+    }
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+
+    @media (max-width: 800px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 0.45rem;
+
+    li {
+      cursor: pointer;
+      padding: 0.55rem 0.65rem;
+      border-radius: 6px;
+      border: 1px solid transparent;
+      background: rgba(0, 0, 0, 0.2);
+
+      &.is-active {
+        border-color: rgba(61, 220, 151, 0.45);
+      }
+
+      strong {
+        display: block;
+      }
+
+      em {
+        color: $pulse-muted;
+        font-style: normal;
+        font-size: 0.8rem;
+      }
+    }
+  }
+
+  &__timeline {
+    margin: 0;
+    padding-left: 1.1rem;
+    display: grid;
+    gap: 0.55rem;
+
+    li {
+      display: grid;
+      gap: 0.15rem;
+    }
+
+    code {
+      color: $pulse-accent;
+    }
+
+    time {
+      color: $pulse-muted;
+      font-size: 0.75rem;
+    }
+  }
+
+  &__cli {
+    background: #0a0e0b;
+    color: $pulse-muted;
+    padding: 0.9rem 1rem;
+    border-radius: 8px;
+    overflow: auto;
+  }
+
+  &__error {
+    color: $pulse-danger;
+  }
+
+  &__muted {
+    color: $pulse-muted;
+    font-size: 0.9rem;
+  }
+}
+
+.st {
+  display: inline-block;
+  font-size: 0.75rem;
+  padding: 0.1rem 0.4rem;
+  border-radius: 999px;
+  margin: 0.25rem 0;
+
+  &--queued {
+    background: rgba(230, 184, 77, 0.2);
+    color: $pulse-warn;
+  }
+
+  &--running {
+    background: rgba(61, 220, 151, 0.2);
+    color: $pulse-accent;
+  }
+
+  &--done {
+    background: rgba(61, 220, 151, 0.35);
+    color: #d8ffe9;
+  }
+
+  &--failed {
+    background: rgba(232, 93, 93, 0.25);
+    color: $pulse-danger;
+  }
+}

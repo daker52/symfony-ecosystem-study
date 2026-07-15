@@ -159,11 +159,11 @@ Odkazy:
 - https://sass-lang.com/documentation/
 
 **Den 14 — demo**
-- [ ] malá appka: API + Doctrine + JWT
-- [ ] CQRS přes Messenger
-- [ ] Vue frontend
-- [ ] jeden console command
-- [ ] PHPStan/Mago v CI
+- [x] Pulse: API + Doctrine + JWT
+- [x] CQRS přes Messenger (create + async stages)
+- [x] Vue frontend (live board)
+- [x] console command `app:pulse:report`
+- [x] PHPStan v CI (green)
 
 ---
 
@@ -207,7 +207,7 @@ Studijní poznámky: [docs/README.md](docs/README.md)
 | 11 | JWT | x | [den-11](docs/den-11.md) |
 | 12 | PHPStan + Mago | x | [den-12](docs/den-12.md) |
 | 13 | SASS | x | [den-13](docs/den-13.md) |
-| 14 | demo | | |
+| 14 | Pulse demo | x | [den-14](docs/den-14.md) |
 
 ---
 

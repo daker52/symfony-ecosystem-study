@@ -20,3 +20,4 @@ Krátké poznámky z učení — hlavně pro mě, ať vidím progres.
 | 11 | JWT + Security | [den-11.md](den-11.md) |
 | 12 | PHPStan, Mago, CI | [den-12.md](den-12.md) |
 | 13 | SASS | [den-13.md](den-13.md) |
+| 14 | Pulse — finální demo | [den-14.md](den-14.md) |
