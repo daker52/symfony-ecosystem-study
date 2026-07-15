@@ -181,11 +181,12 @@ Odkazy:
 ## Struktura repa
 
 ```
-demo/        — Symfony aplikace
-docs/        — studijní deník (den 1, den 2, …)
+demo/        — Symfony aplikace (+ vlastní README jak to spustit)
+docs/        — studijní deník (den 1 … den 14)
 private/     — jen lokálně, ne na git (.gitignore)
 ```
 
+Demo app — jak spustit / co ukazuje: [demo/README.md](demo/README.md)  
 Studijní poznámky: [docs/README.md](docs/README.md)
 
 ---
