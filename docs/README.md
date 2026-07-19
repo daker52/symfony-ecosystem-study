@@ -21,3 +21,4 @@ Krátké poznámky z učení — hlavně pro mě, ať vidím progres.
 | 12 | PHPStan, Mago, CI | [den-12.md](den-12.md) |
 | 13 | SASS | [den-13.md](den-13.md) |
 | 14 | Pulse — finální demo | [den-14.md](den-14.md) |
+| 15–21 | Týden 3 — dorovnání mezer | [plan-tyden-3.md](plan-tyden-3.md) |

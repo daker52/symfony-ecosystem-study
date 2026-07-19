@@ -149,3 +149,5 @@ Studijní deník po dnech je v `../docs/` — tady v `demo/` je hlavně kód.
 - RabbitMQ je připravený přes DSN/compose, default běží Doctrine fronta
 
 Cíl byl **pochopit a ukázat architekturu**, ne shipnout SaaS.
+
+Další plán (Rabbit napevno, Mago, LESS, RS256, testy…): [../docs/plan-tyden-3.md](../docs/plan-tyden-3.md)

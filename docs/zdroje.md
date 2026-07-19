@@ -196,11 +196,27 @@ Seznam materiálů, které používám k učení. Není to exhaustivní — spí
 
 ---
 
-## Plánované (den 14)
+## Den 14 — Pulse
 
-| Téma | Zdroj |
-|------|-------|
-| Finální demo | vlastní `demo/` + deník |
+- vlastní `demo/` + [den-14.md](den-14.md)
+- [Messenger](https://symfony.com/doc/current/messenger.html)
+- [Lexik JWT](https://github.com/lexik/LexikJWTAuthenticationBundle)
+
+---
+
+## Týden 3 — plánované zdroje (dny 15–21)
+
+Detail: [plan-tyden-3.md](plan-tyden-3.md)
+
+| Den | Téma | Zdroje |
+|-----|------|--------|
+| 15 | RabbitMQ napevno | [tutorials](https://www.rabbitmq.com/tutorials), [AMQP transport](https://symfony.com/doc/current/messenger.html#amqp-transport), [tutorial PHP](https://www.rabbitmq.com/tutorials/tutorial-one-php) |
+| 16 | Mago + CI | [Mago docs](https://mago.carthage.software/latest/en/), [install](https://mago.carthage.software/latest/en/getting-started/installation.html), [analyzer](https://mago.carthage.software/latest/en/tools/analyzer.html) |
+| 17 | LESS | [lesscss.org](https://lesscss.org/), [features](https://lesscss.org/features/), [Vite CSS](https://vite.dev/guide/features.html#css-pre-processors) |
+| 18 | JWT RS256 | [Lexik bundle](https://symfony.com/bundles/LexikJWTAuthenticationBundle/current/index.html), [jwt.io](https://jwt.io/introduction) |
+| 19 | PHPUnit | [Symfony testing](https://symfony.com/doc/current/testing.html), [PHPUnit](https://docs.phpunit.de/en/11.5/), [SymfonyCasts PHPUnit](https://symfonycasts.com/screencast/phpunit) |
+| 20 | Forms + Validation | [Forms](https://symfony.com/doc/current/forms.html), [Validation](https://symfony.com/doc/current/validation.html), [SymfonyCasts Forms](https://symfonycasts.com/screencast/symfony-forms) |
+| 21 | Foundry + Encore | [Foundry bundle](https://symfony.com/bundles/ZenstruckFoundryBundle/current/index.html), [Foundry GitHub](https://github.com/zenstruck/foundry), [Encore](https://symfony.com/doc/current/frontend/encore/installation.html) |
 
 ---
 

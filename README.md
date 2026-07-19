@@ -50,7 +50,10 @@ Kompletní seznam co studuju: [docs/zdroje.md](docs/zdroje.md)
 
 ---
 
-## Plán — 14 dní (~3–4 h/den)
+## Plán — fáze 1: 14 dní (hotovo) · fáze 2: dny 15–21
+
+Prvních 14 dní = pochopit stack a mít Pulse demo.  
+Další týden = dorovnat slabá místa z checklistu (Rabbit napevno, Mago, LESS, testy…).
 
 ### Týden 1
 
@@ -165,16 +168,84 @@ Odkazy:
 - [x] console command `app:pulse:report`
 - [x] PHPStan v CI (green)
 
+### Týden 3 — dorovnání mezer (~2–3 h/den)
+
+**Den 15 — RabbitMQ napevno**
+- [ ] `docker compose -f docker-compose.rabbitmq.yml up -d`
+- [ ] `symfony/amqp-messenger` + AMQP DSN
+- [ ] Pulse přes Rabbit (stejné handlery, jiný transport)
+- [ ] UI management: queues / messages
+
+- https://www.rabbitmq.com/tutorials/tutorial-one-php
+- https://symfony.com/doc/current/messenger.html#amqp-transport
+- https://github.com/php-amqp/php-amqp
+
+**Den 16 — Mago + CI**
+- [ ] nainstalovat Mago, `mago analyze` na `demo/src`
+- [ ] opravit / zapsat nálezy
+- [ ] přidat Mago job do GitHub Actions (vedle PHPStan)
+
+- https://mago.carthage.software/latest/en/
+- https://mago.carthage.software/latest/en/getting-started/installation.html
+- https://mago.carthage.software/latest/en/tools/analyzer.html
+
+**Den 17 — LESS (+ srovnání se SASS)**
+- [ ] jeden `.less` (proměnné, nesting, mixiny)
+- [ ] napojit do Vite vedle SASS
+- [ ] zapsat rozdíly LESS vs SASS (pro pohovor)
+
+- https://lesscss.org/
+- https://lesscss.org/features/
+- https://sass-lang.com/documentation/syntax
+
+**Den 18 — JWT RS256**
+- [ ] PEM klíče (private/public)
+- [ ] přepnout Lexik z HS256 na RS256
+- [ ] ověřit `/api/login` + `/api/me` + Pulse
+
+- https://github.com/lexik/LexikJWTAuthenticationBundle/blob/3.x/Resources/doc/index.md
+- https://symfony.com/bundles/LexikJWTAuthenticationBundle/current/index.html
+- https://jwt.io/introduction
+
+**Den 19 — PHPUnit testy (Pulse / JWT)**
+- [ ] 2–3 testy: login → token, create order (sync část), list orders
+- [ ] `phpunit` lokálně + job v CI
+
+- https://symfony.com/doc/current/testing.html
+- https://symfony.com/doc/current/testing.html#functional-tests
+- https://docs.phpunit.de/en/11.5/
+
+**Den 20 — Forms + Validation**
+- [ ] Symfony Form + constraints
+- [ ] napojit na jednu stránku / API validaci (Work Order nebo topic)
+
+- https://symfony.com/doc/current/forms.html
+- https://symfony.com/doc/current/validation.html
+- https://symfonycasts.com/screencast/symfony-forms
+
+**Den 21 — Foundry + (volitelně) Encore přehled**
+- [ ] Zenstruck Foundry místo/vedle klasických fixtures
+- [ ] krátká poznámka Vite vs Webpack Encore (bez nutnosti plného Encore setupu)
+
+- https://symfony.com/bundles/ZenstruckFoundryBundle/current/index.html
+- https://github.com/zenstruck/foundry
+- https://symfony.com/doc/current/frontend/encore/installation.html
+- https://symfony.com/doc/current/frontend.html#webpack-encore
+
+Detailnější rozpis + checklist: [docs/plan-tyden-3.md](docs/plan-tyden-3.md)
+
 ---
 
 ## Priorita (když nestíhám)
 
-1. Symfony + DI + Doctrine
-2. DDD/CQRS základy
-3. Vue + TS + Vite
-4. RabbitMQ / Messenger
-5. PHPStan, Mago, CI
-6. zbytek
+**Fáze 1 (hotovo):** Symfony + DI + Doctrine → DDD/CQRS → Vue/Vite → Messenger → PHPStan/CI  
+
+**Fáze 2 (teď):**
+1. RabbitMQ reálně
+2. Mago v CI
+3. LESS + JWT RS256
+4. PHPUnit
+5. Forms / Foundry
 
 ---
 
@@ -182,12 +253,13 @@ Odkazy:
 
 ```
 demo/        — Symfony aplikace (+ vlastní README jak to spustit)
-docs/        — studijní deník (den 1 … den 14)
+docs/        — studijní deník (den 1 …) + plán týden 3
 private/     — jen lokálně, ne na git (.gitignore)
 ```
 
 Demo app — jak spustit / co ukazuje: [demo/README.md](demo/README.md)  
-Studijní poznámky: [docs/README.md](docs/README.md)
+Studijní poznámky: [docs/README.md](docs/README.md)  
+Plán týden 3: [docs/plan-tyden-3.md](docs/plan-tyden-3.md)
 
 ---
 
@@ -204,11 +276,18 @@ Studijní poznámky: [docs/README.md](docs/README.md)
 | 7 | Fixtures + async | x | [den-07](docs/den-07.md) |
 | 8 | Vue + TS | x | [den-08](docs/den-08.md) |
 | 9 | Vite | x | [den-09](docs/den-09.md) |
-| 10 | RabbitMQ | x | [den-10](docs/den-10.md) |
+| 10 | RabbitMQ (teorie + compose) | x | [den-10](docs/den-10.md) |
 | 11 | JWT | x | [den-11](docs/den-11.md) |
-| 12 | PHPStan + Mago | x | [den-12](docs/den-12.md) |
+| 12 | PHPStan + Mago (config) | x | [den-12](docs/den-12.md) |
 | 13 | SASS | x | [den-13](docs/den-13.md) |
 | 14 | Pulse demo | x | [den-14](docs/den-14.md) |
+| 15 | RabbitMQ napevno | | |
+| 16 | Mago + CI | | |
+| 17 | LESS | | |
+| 18 | JWT RS256 | | |
+| 19 | PHPUnit | | |
+| 20 | Forms + Validation | | |
+| 21 | Foundry (+ Encore přehled) | | |
 
 ---
 
@@ -226,8 +305,14 @@ Studijní poznámky: [docs/README.md](docs/README.md)
 **Frontend**
 - https://vuejs.org/
 - https://vite.dev/
+- https://lesscss.org/
+- https://sass-lang.com/documentation/
 
 **Nástroje**
 - https://phpstan.org/
 - https://mago.carthage.software/latest/en/
 - https://www.rabbitmq.com/tutorials
+- https://docs.phpunit.de/
+- https://github.com/zenstruck/foundry
+
+Kompletní seznam po dnech: [docs/zdroje.md](docs/zdroje.md)
