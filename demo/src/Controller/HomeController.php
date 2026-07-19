@@ -14,7 +14,7 @@ final class HomeController extends AbstractController
     public function index(): Response
     {
         return $this->render('home/index.html.twig', [
-            'title' => 'Symfony study — den 14 · Pulse',
+            'title' => 'Symfony study — den 15 · Broker Passport',
         ]);
     }
 
@@ -61,8 +61,8 @@ final class HomeController extends AbstractController
             'php' => PHP_VERSION,
             'symfony' => Kernel::VERSION,
             'app' => 'symfony-ecosystem-study',
-            'day' => 14,
-            'demo' => 'pulse',
+            'day' => 15,
+            'demo' => 'pulse-broker-passport',
         ]);
     }
 }

@@ -171,14 +171,16 @@ Odkazy:
 ### Týden 3 — dorovnání mezer (~2–3 h/den)
 
 **Den 15 — RabbitMQ napevno**
-- [ ] `docker compose -f docker-compose.rabbitmq.yml up -d`
-- [ ] `symfony/amqp-messenger` + AMQP DSN
-- [ ] Pulse přes Rabbit (stejné handlery, jiný transport)
-- [ ] UI management: queues / messages
+- [x] topology twin `amqpsim://` + živý `amqplib://` (php-amqplib)
+- [x] Broker Passport (exchange → queue na Pulse timeline)
+- [x] `app:pulse:broker --export` → Rabbit `definitions.json`
+- [x] docker-compose připravený na přepnutí
 
 - https://www.rabbitmq.com/tutorials/tutorial-one-php
 - https://symfony.com/doc/current/messenger.html#amqp-transport
 - https://github.com/php-amqp/php-amqp
+- https://www.rabbitmq.com/docs/definitions
+- https://github.com/php-amqplib/php-amqplib
 
 **Den 16 — Mago + CI**
 - [ ] nainstalovat Mago, `mago analyze` na `demo/src`
@@ -281,7 +283,7 @@ Plán týden 3: [docs/plan-tyden-3.md](docs/plan-tyden-3.md)
 | 12 | PHPStan + Mago (config) | x | [den-12](docs/den-12.md) |
 | 13 | SASS | x | [den-13](docs/den-13.md) |
 | 14 | Pulse demo | x | [den-14](docs/den-14.md) |
-| 15 | RabbitMQ napevno | | |
+| 15 | RabbitMQ napevno + Broker Passport | x | [den-15](docs/den-15.md) |
 | 16 | Mago + CI | | |
 | 17 | LESS | | |
 | 18 | JWT RS256 | | |

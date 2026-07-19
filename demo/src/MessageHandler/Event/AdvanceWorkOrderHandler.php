@@ -4,6 +4,7 @@ namespace App\MessageHandler\Event;
 
 use App\Entity\WorkOrder;
 use App\Message\Event\AdvanceWorkOrderMessage;
+use App\Messenger\BrokerPassportContext;
 use App\Repository\WorkOrderRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Psr\Log\LoggerInterface;
@@ -18,6 +19,7 @@ final class AdvanceWorkOrderHandler
         private EntityManagerInterface $entityManager,
         private MessageBusInterface $commandBus,
         private LoggerInterface $logger,
+        private BrokerPassportContext $passportContext,
     ) {
     }
 
@@ -32,14 +34,22 @@ final class AdvanceWorkOrderHandler
             return;
         }
 
-        // malá pauza — na dashboardu je vidět průběh stage po stage
         usleep(400_000);
+
+        $passport = $this->passportContext->get();
+        $broker = $passport?->brokerKind;
+        $exchange = $passport?->exchange;
+        $queue = $passport?->queue;
+        $routingKey = $passport?->routingKey;
 
         $next = $order->nextStageAfter($order->getCurrentStage());
         if ($next === null || $next === 'complete') {
-            $order->markDone();
+            $order->markDone($broker, $exchange, $queue, $routingKey);
             $this->entityManager->flush();
-            $this->logger->info('Pulse work order done', ['id' => $order->getId()]);
+            $this->logger->info('Pulse work order done', [
+                'id' => $order->getId(),
+                'via' => $passport?->label(),
+            ]);
 
             return;
         }
@@ -51,10 +61,9 @@ final class AdvanceWorkOrderHandler
             'complete' => 'Finalizace',
         ];
 
-        $order->startStage($next, $labels[$next] ?? $next);
+        $order->startStage($next, $labels[$next] ?? $next, $broker, $exchange, $queue, $routingKey);
         $this->entityManager->flush();
 
-        // další krok znovu do fronty — řetěz zpráv
         $this->commandBus->dispatch(new AdvanceWorkOrderMessage((int) $order->getId()));
     }
 }

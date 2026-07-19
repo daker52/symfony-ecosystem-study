@@ -1,8 +1,12 @@
-/** Pulse API types — den 14 */
+/** Pulse API types — den 14/15 */
 export interface PulseEvent {
   stage: string;
   message: string;
   at: string;
+  viaBroker: string | null;
+  viaExchange: string | null;
+  viaQueue: string | null;
+  viaRoutingKey: string | null;
 }
 
 export interface WorkOrderDto {

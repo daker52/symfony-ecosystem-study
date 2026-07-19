@@ -5,13 +5,12 @@
 {% block body %}
     <main style="max-width: 720px; margin: 2rem auto; font-family: system-ui, sans-serif; line-height: 1.5;">
         <h1>{{ title }}</h1>
-        <p>Finální demo <strong>Pulse</strong> — JWT, CQRS, Messenger pipeline, Vue live board.</p>
+        <p>Den 15 — Broker Passport: Pulse stages nesou exchange → queue (amqpsim / Rabbit).</p>
 
-        <h2>Jak spustit Pulse</h2>
-        <pre style="background:#f4f4f4;padding:1rem;">php bin/console doctrine:fixtures:load --no-interaction
+        <h2>Jak spustit Pulse + broker</h2>
+        <pre style="background:#f4f4f4;padding:1rem;">php bin/console app:pulse:broker --export
 php bin/console messenger:consume async -vv
-# prohlížeč: /pulse
-# study@example.com / study123</pre>
+# /pulse — study@example.com / study123</pre>
 
         <ul>
             <li><a href="{{ path('app_pulse') }}"><strong>Pulse — finální demo (den 14)</strong></a></li>

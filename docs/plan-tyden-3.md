@@ -23,20 +23,24 @@ Cíl: umět věci **provozovat**, ne jen „mám to v poznámkách“.
 
 ## Den 15 — RabbitMQ napevno
 
+**Status:** hotovo — Broker Passport + `amqpsim` / `amqplib`, viz [den-15.md](den-15.md)
+
 **Úkoly**
-1. Spustit `docker compose -f demo/docker-compose.rabbitmq.yml up -d`
-2. Doinstalovat AMQP support (`symfony/amqp-messenger`, PHP ext dle OS)
-3. V `.env` přepnout `MESSENGER_TRANSPORT_DSN` na `amqp://…`
-4. Spustit worker + vytvořit Pulse order — ověřit ve Rabbit UI (`localhost:15672`)
-5. Zapsat aha: co je queue vs exchange vs consumer
+1. [x] Topology twin `amqpsim://` (bez Dockeru)
+2. [x] Pure PHP `amqplib://` na živý Rabbit
+3. [x] Passport na Pulse timeline
+4. [x] `app:pulse:broker --export` → definitions.json
+5. [x] docker-compose připravený
 
 **Zdroje**
 - https://www.rabbitmq.com/tutorials
 - https://www.rabbitmq.com/tutorials/tutorial-one-php
 - https://symfony.com/doc/current/messenger.html#amqp-transport
 - https://www.rabbitmq.com/docs/management
+- https://www.rabbitmq.com/docs/definitions
+- https://github.com/php-amqplib/php-amqplib
 
-**Hotovo když:** Pulse stage messages jdou vidět v Rabbit management UI.
+**Hotovo když:** Pulse stage messages jdou vidět s badge broker hop (amqpsim nebo rabbitmq).
 
 ---
 

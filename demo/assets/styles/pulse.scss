@@ -189,6 +189,19 @@ $pulse-panel: #18201b;
     }
   }
 
+  &__hop {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem;
+    align-items: center;
+    font-size: 0.78rem;
+    color: $pulse-muted;
+  }
+
+  &__rk {
+    opacity: 0.8;
+  }
+
   &__cli {
     background: #0a0e0b;
     color: $pulse-muted;
@@ -232,5 +245,31 @@ $pulse-panel: #18201b;
   &--failed {
     background: rgba(232, 93, 93, 0.25);
     color: $pulse-danger;
+  }
+}
+
+.broker {
+  display: inline-block;
+  font-style: normal;
+  font-size: 0.7rem;
+  padding: 0.1rem 0.4rem;
+  border-radius: 4px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+
+  &--amqpsim {
+    background: rgba(230, 184, 77, 0.25);
+    color: $pulse-warn;
+  }
+
+  &--rabbitmq {
+    background: rgba(61, 220, 151, 0.28);
+    color: $pulse-accent;
+  }
+
+  &--doctrine {
+    background: rgba(140, 160, 180, 0.25);
+    color: #b8c8d8;
   }
 }

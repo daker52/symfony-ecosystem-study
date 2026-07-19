@@ -98,24 +98,48 @@ class WorkOrder
         return $this->events;
     }
 
-    public function addEvent(string $stage, string $message): void
-    {
-        $this->events->add(new WorkOrderEvent($this, $stage, $message));
+    public function addEvent(
+        string $stage,
+        string $message,
+        ?string $viaBroker = null,
+        ?string $viaExchange = null,
+        ?string $viaQueue = null,
+        ?string $viaRoutingKey = null,
+    ): void {
+        $this->events->add(new WorkOrderEvent(
+            $this,
+            $stage,
+            $message,
+            $viaBroker,
+            $viaExchange,
+            $viaQueue,
+            $viaRoutingKey,
+        ));
     }
 
-    public function startStage(string $stage, string $message): void
-    {
+    public function startStage(
+        string $stage,
+        string $message,
+        ?string $viaBroker = null,
+        ?string $viaExchange = null,
+        ?string $viaQueue = null,
+        ?string $viaRoutingKey = null,
+    ): void {
         $this->status = self::STATUS_RUNNING;
         $this->currentStage = $stage;
-        $this->addEvent($stage, $message);
+        $this->addEvent($stage, $message, $viaBroker, $viaExchange, $viaQueue, $viaRoutingKey);
     }
 
-    public function markDone(): void
-    {
+    public function markDone(
+        ?string $viaBroker = null,
+        ?string $viaExchange = null,
+        ?string $viaQueue = null,
+        ?string $viaRoutingKey = null,
+    ): void {
         $this->status = self::STATUS_DONE;
         $this->currentStage = 'complete';
         $this->finishedAt = new \DateTimeImmutable();
-        $this->addEvent('complete', 'Pipeline hotová.');
+        $this->addEvent('complete', 'Pipeline hotová.', $viaBroker, $viaExchange, $viaQueue, $viaRoutingKey);
     }
 
     public function markFailed(string $reason): void

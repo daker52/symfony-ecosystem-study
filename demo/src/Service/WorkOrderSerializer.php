@@ -16,7 +16,15 @@ final class WorkOrderSerializer
      *     currentStage: string|null,
      *     createdAt: string,
      *     finishedAt: string|null,
-     *     events: list<array{stage: string, message: string, at: string}>
+     *     events: list<array{
+     *         stage: string,
+     *         message: string,
+     *         at: string,
+     *         viaBroker: string|null,
+     *         viaExchange: string|null,
+     *         viaQueue: string|null,
+     *         viaRoutingKey: string|null
+     *     }>
      * }
      */
     public function toArray(WorkOrder $order): array
@@ -34,6 +42,10 @@ final class WorkOrderSerializer
                     'stage' => $event->getStage(),
                     'message' => $event->getMessage(),
                     'at' => $event->getCreatedAt()->format(\DateTimeInterface::ATOM),
+                    'viaBroker' => $event->getViaBroker(),
+                    'viaExchange' => $event->getViaExchange(),
+                    'viaQueue' => $event->getViaQueue(),
+                    'viaRoutingKey' => $event->getViaRoutingKey(),
                 ],
                 $order->getEvents()->toArray(),
             ),

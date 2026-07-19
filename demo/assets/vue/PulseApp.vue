@@ -197,7 +197,7 @@ onUnmounted(() => stopPolling());
         </section>
 
         <section class="pulse__panel">
-          <h2>Timeline</h2>
+          <h2>Timeline · Broker Passport</h2>
           <template v-if="selected">
             <p>
               <span :class="'st st--' + selected.status">{{ selected.status }}</span>
@@ -207,6 +207,11 @@ onUnmounted(() => stopPolling());
               <li v-for="(ev, i) in selected.events" :key="i">
                 <code>{{ ev.stage }}</code>
                 <span>{{ ev.message }}</span>
+                <span v-if="ev.viaBroker" class="pulse__hop">
+                  <em :class="'broker broker--' + ev.viaBroker">{{ ev.viaBroker }}</em>
+                  <span v-if="ev.viaExchange">{{ ev.viaExchange }} → {{ ev.viaQueue }}</span>
+                  <span v-if="ev.viaRoutingKey" class="pulse__rk">rk={{ ev.viaRoutingKey }}</span>
+                </span>
                 <time>{{ ev.at }}</time>
               </li>
             </ol>
@@ -216,7 +221,8 @@ onUnmounted(() => stopPolling());
       </div>
 
       <pre class="pulse__cli">php bin/console messenger:consume async -vv
-php bin/console app:pulse:report</pre>
+php bin/console app:pulse:report
+php bin/console app:pulse:broker --export</pre>
     </template>
   </div>
 </template>

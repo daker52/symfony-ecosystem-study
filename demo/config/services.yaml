@@ -1,6 +1,6 @@
 parameters:
     app.study.title: 'symfony-ecosystem-study'
-    app.study.day: 14
+    app.study.day: 15
 
 services:
     _defaults:
@@ -27,6 +27,12 @@ services:
             $studyTitle: '%app.study.title%'
             $studyDay: '%app.study.day%'
             $appEnv: '%kernel.environment%'
+
+    App\Messenger\Transport\AmqpSimTransportFactory:
+        tags: ['messenger.transport_factory']
+
+    App\Messenger\Transport\AmqpLibTransportFactory:
+        tags: ['messenger.transport_factory']
 
     App\Controller\CqrsDemoController:
         bind:

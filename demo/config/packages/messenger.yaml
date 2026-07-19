@@ -3,7 +3,9 @@ framework:
         failure_transport: failed
 
         transports:
-            # Den 10: DSN z .env — doctrine://… (default) NEBO amqp://… (RabbitMQ)
+            # Den 15 default: amqpsim = Rabbit topologie bez Dockeru
+            # Živý Rabbit: amqplib://guest:guest@127.0.0.1:5672/%2f?exchange=pulse.work&queue=pulse.async&routing_key=work.advance
+            # Legacy: doctrine://default?auto_setup=0
             async:
                 dsn: '%env(MESSENGER_TRANSPORT_DSN)%'
                 retry_strategy:
@@ -14,7 +16,9 @@ framework:
         default_bus: command.bus
 
         buses:
-            command.bus: []
+            command.bus:
+                middleware:
+                    - App\Messenger\Middleware\BrokerPassportMiddleware
             query.bus: []
 
         routing:
@@ -24,5 +28,4 @@ framework:
 
             App\Message\Command\CreateStudyTopicCommand: async
             App\Message\Event\StudyTopicCreatedMessage: async
-            # Pulse pipeline — CreateWorkOrder zůstává sync (vrací ID)
             App\Message\Event\AdvanceWorkOrderMessage: async
