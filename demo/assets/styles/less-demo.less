@@ -1,0 +1,60 @@
+// Den 17 — LESS: proměnné, nesting, mixiny (vedle SASS)
+
+@less-bg: #f3f6f4;
+@less-ink: #1c2420;
+@less-accent: #2a6f4e;
+@less-muted: #66776d;
+@less-radius: 8px;
+
+.card() {
+  background: #fff;
+  border: 1px solid darken(@less-bg, 8%);
+  border-radius: @less-radius;
+  padding: 1rem 1.1rem;
+}
+
+.less-demo {
+  max-width: 640px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  font-family: Georgia, 'Times New Roman', serif;
+  color: @less-ink;
+  background: linear-gradient(160deg, @less-bg, lighten(@less-bg, 4%));
+  border-radius: @less-radius * 1.5;
+
+  &__title {
+    margin: 0 0 0.35rem;
+    color: @less-accent;
+  }
+
+  &__lead {
+    margin: 0 0 1rem;
+    color: @less-muted;
+    font-size: 0.95rem;
+  }
+
+  &__compare {
+    .card();
+    margin: 0;
+    list-style: none;
+
+    li {
+      padding: 0.35rem 0;
+      border-bottom: 1px solid darken(@less-bg, 6%);
+
+      &:last-child {
+        border-bottom: none;
+      }
+
+      strong {
+        color: @less-accent;
+      }
+    }
+  }
+
+  &__note {
+    margin-top: 1rem;
+    font-size: 0.85rem;
+    color: @less-muted;
+  }
+}

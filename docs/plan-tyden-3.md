@@ -46,28 +46,31 @@ Cíl: umět věci **provozovat**, ne jen „mám to v poznámkách“.
 
 ## Den 16 — Mago + CI
 
+**Status:** hotovo — viz [den-16.md](den-16.md)
+
 **Úkoly**
-1. Nainstalovat Mago podle docs
-2. `mago analyze` na `demo/src`
-3. Opravit / zdůvodnit nálezy
-4. Přidat step do `.github/workflows/ci.yml`
+1. [x] `composer require --dev carthage-software/mago`
+2. [x] `mago.toml` + `includes = ["vendor"]`
+3. [x] baseline + `composer mago`
+4. [x] CI job
 
 **Zdroje**
-- https://mago.carthage.software/latest/en/
-- https://mago.carthage.software/latest/en/getting-started/installation.html
-- https://mago.carthage.software/latest/en/tools/analyzer.html
+- https://mago.carthage.software/
+- https://mago.carthage.software/1.25.2/en/guide/installation/
+- https://github.com/carthage-software/mago
 
-**Hotovo když:** Mago běží lokálně i v CI (nebo aspoň lokálně + dokumentovaný postup).
+**Hotovo když:** Mago běží lokálně i v CI (baseline OK).
 
 ---
 
 ## Den 17 — LESS
 
+**Status:** hotovo — viz [den-17.md](den-17.md)
+
 **Úkoly**
-1. Vytvořit např. `assets/styles/less-demo.less` (variables, nesting, mixin)
-2. Napojit přes Vite (less plugin / preprocess)
-3. Malá stránka nebo třída v Pulse/Vue demo
-4. Do deníku: LESS vs SASS (co je stejné, co jiné)
+1. [x] `less-demo.less` (variables, nesting, mixin)
+2. [x] Vite + `/less-demo`
+3. [x] LESS vs SASS v deníku
 
 **Zdroje**
 - https://lesscss.org/

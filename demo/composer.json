@@ -86,6 +86,10 @@
         ],
         "post-update-cmd": [
             "@auto-scripts"
+        ],
+        "phpstan": "phpstan analyse --memory-limit=512M",
+        "mago": [
+            "@php vendor/bin/mago analyze --baseline mago-baseline.toml"
         ]
     },
     "conflict": {
@@ -98,6 +102,7 @@
         }
     },
     "require-dev": {
+        "carthage-software/mago": "^1.44",
         "doctrine/doctrine-fixtures-bundle": "^4.3",
         "phpstan/phpstan": "*",
         "phpstan/phpstan-doctrine": "*",

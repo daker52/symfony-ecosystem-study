@@ -183,22 +183,23 @@ Odkazy:
 - https://github.com/php-amqplib/php-amqplib
 
 **Den 16 — Mago + CI**
-- [ ] nainstalovat Mago, `mago analyze` na `demo/src`
-- [ ] opravit / zapsat nálezy
-- [ ] přidat Mago job do GitHub Actions (vedle PHPStan)
+- [x] `carthage-software/mago` + `mago.toml` + baseline
+- [x] `mago analyze` lokálně
+- [x] GitHub Actions job `mago` (vedle PHPStan)
 
-- https://mago.carthage.software/latest/en/
-- https://mago.carthage.software/latest/en/getting-started/installation.html
-- https://mago.carthage.software/latest/en/tools/analyzer.html
+- https://mago.carthage.software/
+- https://mago.carthage.software/1.25.2/en/guide/installation.html
+- https://github.com/carthage-software/mago
 
 **Den 17 — LESS (+ srovnání se SASS)**
-- [ ] jeden `.less` (proměnné, nesting, mixiny)
-- [ ] napojit do Vite vedle SASS
-- [ ] zapsat rozdíly LESS vs SASS (pro pohovor)
+- [x] `less-demo.less` (proměnné, nesting, mixiny)
+- [x] napojeno do Vite + stránka `/less-demo`
+- [x] zapsané rozdíly LESS vs SASS
 
 - https://lesscss.org/
 - https://lesscss.org/features/
 - https://sass-lang.com/documentation/syntax
+- https://vite.dev/guide/features.html#css-pre-processors
 
 **Den 18 — JWT RS256**
 - [ ] PEM klíče (private/public)
@@ -284,8 +285,8 @@ Plán týden 3: [docs/plan-tyden-3.md](docs/plan-tyden-3.md)
 | 13 | SASS | x | [den-13](docs/den-13.md) |
 | 14 | Pulse demo | x | [den-14](docs/den-14.md) |
 | 15 | RabbitMQ napevno + Broker Passport | x | [den-15](docs/den-15.md) |
-| 16 | Mago + CI | | |
-| 17 | LESS | | |
+| 16 | Mago + CI | x | [den-16](docs/den-16.md) |
+| 17 | LESS | x | [den-17](docs/den-17.md) |
 | 18 | JWT RS256 | | |
 | 19 | PHPUnit | | |
 | 20 | Forms + Validation | | |

@@ -1,12 +1,25 @@
-# Mago — den 12
-# Instalace (lokálně): https://mago.carthage.software/latest/en/
-#   mago init
-#   mago analyze
+# Mago — den 16
+# Lokálně (Windows): tools/mago/mago.exe analyze
+# Composer wrapper: vendor/bin/mago (stáhne binary)
+# CI: curl installer + mago analyze
 #
-# V CI zatím primárně PHPStan — Mago si držíme jako další nástroj týmu.
-# Když máš mago v PATH:
-#   cd demo && mago analyze src
+# https://mago.carthage.software/
+
+php-version = "8.3.0"
 
 [source]
 paths = ["src"]
-excludes = ["var", "vendor", "public/build"]
+includes = ["vendor"]
+excludes = [
+    "var",
+    "public/build",
+    "tools",
+    "node_modules",
+]
+
+[linter]
+integrations = ["symfony", "phpunit"]
+
+[analyzer]
+find-unused-definitions = false
+find-unused-expressions = false

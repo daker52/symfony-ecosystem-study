@@ -1,4 +1,4 @@
-# Den 12 — základní CI (PHPStan + fixture smoke)
+# Den 12 + 16 — PHPStan + Mago + Vite build
 name: CI
 
 on:
@@ -19,7 +19,7 @@ jobs:
         uses: shivammathur/setup-php@v2
         with:
           php-version: '8.3'
-          extensions: mbstring, pdo_sqlite, sqlite3, openssl
+          extensions: mbstring, pdo_sqlite, sqlite3, openssl, sockets
           coverage: none
 
       - name: Install Composer deps
@@ -27,6 +27,28 @@ jobs:
 
       - name: PHPStan
         run: vendor/bin/phpstan analyse --memory-limit=512M
+
+  mago:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: demo
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.3'
+          coverage: none
+
+      - name: Install Composer deps
+        run: composer install --no-interaction --prefer-dist
+
+      - name: Mago analyze
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: vendor/bin/mago analyze --baseline mago-baseline.toml
 
   frontend:
     runs-on: ubuntu-latest

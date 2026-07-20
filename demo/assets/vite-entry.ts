@@ -3,6 +3,7 @@ import StudyTopicsApp from './vue/StudyTopicsApp.vue';
 import PulseApp from './vue/PulseApp.vue';
 import './styles/study.scss';
 import './styles/pulse.scss';
+import './styles/less-demo.less';
 
 const studyEl = document.getElementById('vue-study-app');
 if (studyEl) {

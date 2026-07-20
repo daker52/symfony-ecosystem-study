@@ -1,0 +1,46 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}LESS — den 17{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    {% if not vite_dev() %}
+        {% for href in vite_css('vite-entry.ts') %}
+            <link rel="stylesheet" href="{{ href }}">
+        {% endfor %}
+    {% endif %}
+{% endblock %}
+
+{% block javascripts %}
+    {% if vite_dev() %}
+        <script type="module" src="http://localhost:5173/@vite/client"></script>
+        <script type="module" src="{{ vite_js('vite-entry.ts') }}"></script>
+    {% else %}
+        <script type="module" src="{{ vite_js('vite-entry.ts') }}"></script>
+    {% endif %}
+{% endblock %}
+
+{% block body %}
+    <p style="max-width:640px;margin:0.75rem auto;font-family:system-ui,sans-serif;">
+        <a href="{{ path('app_home') }}">← Home</a> · Den 17
+    </p>
+
+    <section class="less-demo">
+        <h1 class="less-demo__title">LESS vedle SASS</h1>
+        <p class="less-demo__lead">
+            Stejné myšlenky (proměnné, nesting, mixiny), jiná syntax. V projektu defaultně SASS;
+            tady je malá LESS ukázka přes Vite.
+        </p>
+        <ul class="less-demo__compare">
+            {% for row in rows %}
+                <li>
+                    <strong>LESS:</strong> <code>{{ row.less }}</code><br>
+                    <strong>SASS:</strong> <code>{{ row.sass }}</code>
+                </li>
+            {% endfor %}
+        </ul>
+        <p class="less-demo__note">
+            Soubor: <code>assets/styles/less-demo.less</code> · SASS: <code>study.scss</code> / <code>pulse.scss</code>
+        </p>
+    </section>
+{% endblock %}

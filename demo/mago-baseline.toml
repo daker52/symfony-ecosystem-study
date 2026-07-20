@@ -1,0 +1,157 @@
+variant = "loose"
+
+[[issues]]
+file = "src/Command/HelloCommand.php"
+code = "mixed-operand"
+message = "Left operand in `||` operation has `mixed` type."
+count = 1
+
+[[issues]]
+file = "src/Command/HelloCommand.php"
+code = "mixed-operand"
+message = "Right operand in `||` operation has `mixed` type."
+count = 1
+
+[[issues]]
+file = "src/Command/StudyListCommand.php"
+code = "mixed-argument"
+message = "Invalid argument type for argument #2 of `sprintf`: expected `Stringable|null|scalar`, but found `nonnull`."
+count = 1
+
+[[issues]]
+file = "src/Command/StudyListCommand.php"
+code = "mixed-assignment"
+message = "Assigning `mixed` type to a variable may lead to unexpected behavior."
+count = 1
+
+[[issues]]
+file = "src/Command/StudyListCommand.php"
+code = "possibly-false-argument"
+message = 'Argument #1 of method `Symfony\Component\Console\Style\SymfonyStyle::writeln` is possibly `false`, but parameter type `iterable<mixed, mixed>|string` does not accept it.'
+count = 1
+
+[[issues]]
+file = "src/Controller/CqrsDemoController.php"
+code = "mixed-assignment"
+message = "Assigning `mixed` type to a variable may lead to unexpected behavior."
+count = 1
+
+[[issues]]
+file = "src/Controller/CqrsDemoController.php"
+code = "mixed-assignment"
+message = "Assigning `nonnull` type to a variable may lead to unexpected behavior."
+count = 1
+
+[[issues]]
+file = "src/Controller/PulseController.php"
+code = "mixed-assignment"
+message = "Assigning `mixed` type to a variable may lead to unexpected behavior."
+count = 1
+
+[[issues]]
+file = "src/Controller/PulseController.php"
+code = "mixed-assignment"
+message = "Assigning `nonnull` type to a variable may lead to unexpected behavior."
+count = 1
+
+[[issues]]
+file = "src/Entity/User.php"
+code = "invalid-return-statement"
+message = 'Invalid return type for function `App\Entity\User::getUserIdentifier`: expected `non-empty-string`, but found `string`.'
+count = 1
+
+[[issues]]
+file = "src/Messenger/Transport/AmqpLibTransport.php"
+code = "mixed-argument"
+message = 'Invalid argument type for argument #1 of `PhpAmqpLib\Message\AMQPMessage::__construct`: expected `string`, but found `mixed`.'
+count = 1
+
+[[issues]]
+file = "src/Messenger/Transport/AmqpLibTransport.php"
+code = "mixed-argument"
+message = 'Invalid argument type for argument #1 of `PhpAmqpLib\Wire\AMQPAbstractCollection::__construct`: expected `array<array-key, mixed>`, but found `nonnull`.'
+count = 1
+
+[[issues]]
+file = "src/Messenger/Transport/AmqpLibTransport.php"
+code = "mixed-assignment"
+message = "Assigning `mixed` type to a variable may lead to unexpected behavior."
+count = 4
+
+[[issues]]
+file = "src/Messenger/Transport/AmqpLibTransport.php"
+code = "possibly-null-destructuring-source"
+message = "Destructuring a possibly null value of type `array<array-key, mixed>|null`."
+count = 1
+
+[[issues]]
+file = "src/Messenger/Transport/AmqpLibTransportFactory.php"
+code = "array-to-string-conversion"
+message = "Potentially casting `array` to `string`."
+count = 3
+
+[[issues]]
+file = "src/Messenger/Transport/AmqpLibTransportFactory.php"
+code = "redundant-cast"
+message = "Redundant cast to `(string)`: the expression already has this type."
+count = 3
+
+[[issues]]
+file = "src/Messenger/Transport/AmqpSimTransport.php"
+code = "invalid-method-access"
+message = "Attempting to access a method on a non-object type (`false`)."
+count = 7
+
+[[issues]]
+file = "src/Messenger/Transport/AmqpSimTransport.php"
+code = "mixed-array-access"
+message = "Unsafe array access on type `mixed`."
+count = 7
+
+[[issues]]
+file = "src/Messenger/Transport/AmqpSimTransport.php"
+code = "mixed-assignment"
+message = "Assigning `mixed` type to a variable may lead to unexpected behavior."
+count = 3
+
+[[issues]]
+file = "src/Messenger/Transport/AmqpSimTransport.php"
+code = "possibly-false-operand"
+message = "Possibly false middle operand used in string concatenation (type `false|string`)."
+count = 2
+
+[[issues]]
+file = "src/Repository/StudyTopicRepository.php"
+code = "mixed-return-statement"
+message = 'Could not infer a precise return type for function `App\Repository\StudyTopicRepository::findLatest`. Saw type `mixed`.'
+count = 1
+
+[[issues]]
+file = "src/Repository/WorkOrderRepository.php"
+code = "invalid-return-statement"
+message = '''Invalid return type for function `App\Repository\WorkOrderRepository::countByStatus`: expected `array{'done': int, 'failed': int, 'queued': int, 'running': int, 'total': int}`, but found `array{'done': int(0), 'failed': int(0), 'queued': int(0), 'running': int(0), 'total': int}|array{'done': int, 'failed': int, 'queued': int, 'running': int, 'total': int, ...<string, int>}`.'''
+count = 1
+
+[[issues]]
+file = "src/Repository/WorkOrderRepository.php"
+code = "mixed-array-access"
+message = "Unsafe array access on type `mixed`."
+count = 2
+
+[[issues]]
+file = "src/Repository/WorkOrderRepository.php"
+code = "mixed-assignment"
+message = "Assigning `mixed` type to a variable may lead to unexpected behavior."
+count = 1
+
+[[issues]]
+file = "src/Repository/WorkOrderRepository.php"
+code = "mixed-return-statement"
+message = 'Could not infer a precise return type for function `App\Repository\WorkOrderRepository::findLatest`. Saw type `mixed`.'
+count = 1
+
+[[issues]]
+file = "src/Service/WorkOrderSerializer.php"
+code = "invalid-return-statement"
+message = '''Invalid return type for function `App\Service\WorkOrderSerializer::toArray`: expected `array{'createdAt': string, 'currentStage': null|string, 'events': list<array{'at': string, 'message': string, 'stage': string, 'viaBroker': null|string, 'viaExchange': null|string, 'viaQueue': null|string, 'viaRoutingKey': null|string}>, 'finishedAt': null|string, 'id': int|null, 'status': string, 'title': string, 'type': string}`, but found `array{'createdAt': non-empty-string, 'currentStage': null|string, 'events': array<int, array{'at': non-empty-string, 'message': string, 'stage': string, 'viaBroker': null|string, 'viaExchange': null|string, 'viaQueue': null|string, 'viaRoutingKey': null|string}>|list<array{'at': non-empty-string, 'message': string, 'stage': string, 'viaBroker': null|string, 'viaExchange': null|string, 'viaQueue': null|string, 'viaRoutingKey': null|string}>, 'finishedAt': non-empty-string|null, 'id': int|null, 'status': string, 'title': string, 'type': string}`.'''
+count = 1

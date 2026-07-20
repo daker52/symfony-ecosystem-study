@@ -1,6 +1,6 @@
 parameters:
     app.study.title: 'symfony-ecosystem-study'
-    app.study.day: 15
+    app.study.day: 17
 
 services:
     _defaults:

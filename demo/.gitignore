@@ -13,6 +13,10 @@
 # Node
 /node_modules/
 
+# Mago binary cache (Composer wrapper stahuje sám; lokální tools/ jen pro Windows SSL workaround)
+/tools/mago/*.exe
+/tools/mago/*.zip
+
 # JWT PEM (když přepneš na RS256)
 /config/jwt/*.pem
 

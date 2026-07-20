@@ -5,15 +5,20 @@
 {% block body %}
     <main style="max-width: 720px; margin: 2rem auto; font-family: system-ui, sans-serif; line-height: 1.5;">
         <h1>{{ title }}</h1>
-        <p>Den 15 — Broker Passport: Pulse stages nesou exchange → queue (amqpsim / Rabbit).</p>
+        <p>Den 16–17 — Mago v CI + LESS vedle SASS.</p>
 
-        <h2>Jak spustit Pulse + broker</h2>
+        <h2>Kvalita kódu</h2>
+        <pre style="background:#f4f4f4;padding:1rem;">composer phpstan
+composer mago
+# Windows: tools\mago\mago.exe analyze --baseline mago-baseline.toml</pre>
+
+        <h2>Pulse + broker</h2>
         <pre style="background:#f4f4f4;padding:1rem;">php bin/console app:pulse:broker --export
-php bin/console messenger:consume async -vv
-# /pulse — study@example.com / study123</pre>
+php bin/console messenger:consume async -vv</pre>
 
         <ul>
-            <li><a href="{{ path('app_pulse') }}"><strong>Pulse — finální demo (den 14)</strong></a></li>
+            <li><a href="{{ path('app_less_demo') }}"><strong>LESS demo (den 17)</strong></a></li>
+            <li><a href="{{ path('app_pulse') }}">Pulse + Broker Passport</a></li>
             <li><a href="{{ path('app_vue_demo') }}">Vue + Vite + SASS</a></li>
             <li><a href="{{ path('app_jwt_demo') }}">JWT demo</a></li>
             <li><a href="{{ path('app_cqrs_demo') }}">CQRS demo</a></li>

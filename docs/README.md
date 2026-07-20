@@ -22,4 +22,6 @@ Krátké poznámky z učení — hlavně pro mě, ať vidím progres.
 | 13 | SASS | [den-13.md](den-13.md) |
 | 14 | Pulse — finální demo | [den-14.md](den-14.md) |
 | 15 | RabbitMQ + Broker Passport | [den-15.md](den-15.md) |
+| 16 | Mago + CI | [den-16.md](den-16.md) |
+| 17 | LESS | [den-17.md](den-17.md) |
 | 15–21 | Týden 3 — dorovnání mezer | [plan-tyden-3.md](plan-tyden-3.md) |

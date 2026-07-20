@@ -211,7 +211,7 @@ Detail: [plan-tyden-3.md](plan-tyden-3.md)
 | Den | Téma | Zdroje |
 |-----|------|--------|
 | 15 | RabbitMQ napevno | [tutorials](https://www.rabbitmq.com/tutorials), [AMQP transport](https://symfony.com/doc/current/messenger.html#amqp-transport), [tutorial PHP](https://www.rabbitmq.com/tutorials/tutorial-one-php) |
-| 16 | Mago + CI | [Mago docs](https://mago.carthage.software/latest/en/), [install](https://mago.carthage.software/latest/en/getting-started/installation.html), [analyzer](https://mago.carthage.software/latest/en/tools/analyzer.html) |
+| 16 | Mago + CI | [Mago docs](https://mago.carthage.software/), [install](https://mago.carthage.software/1.25.2/en/guide/installation/), [GitHub](https://github.com/carthage-software/mago) |
 | 17 | LESS | [lesscss.org](https://lesscss.org/), [features](https://lesscss.org/features/), [Vite CSS](https://vite.dev/guide/features.html#css-pre-processors) |
 | 18 | JWT RS256 | [Lexik bundle](https://symfony.com/bundles/LexikJWTAuthenticationBundle/current/index.html), [jwt.io](https://jwt.io/introduction) |
 | 19 | PHPUnit | [Symfony testing](https://symfony.com/doc/current/testing.html), [PHPUnit](https://docs.phpunit.de/en/11.5/), [SymfonyCasts PHPUnit](https://symfonycasts.com/screencast/phpunit) |
